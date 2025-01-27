@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/roboto-flex";
+import Navigation from "../components/navigation/Navigation.astro";
 ---
 
 <!doctype html>
@@ -11,7 +12,8 @@ import "@fontsource-variable/roboto-flex";
     <meta name="generator" content={Astro.generator} />
     <title>HIVE</title>
   </head>
-  <body>
+  <body class="font-sans px-[50px] py-[30px] bg-[#0F0F0F]">
+    <Navigation />
     <slot />
   </body>
 </html>
