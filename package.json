@@ -9,9 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/netlify": "^6.1.0",
     "@astrojs/preact": "^4.0.3",
     "@astrojs/tailwind": "^5.1.5",
-    "@fontsource-variable/roboto-flex": "^5.1.1",
+    "@fontsource-variable/work-sans": "^5.1.1",
     "astro": "^5.1.10",
     "preact": "^10.25.4",
     "tailwindcss": "^3.4.17"

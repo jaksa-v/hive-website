@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Roboto Flex", ...defaultTheme.fontFamily.sans],
+        sans: ["Work Sans Variable", ...defaultTheme.fontFamily.sans],
       },
     },
   },

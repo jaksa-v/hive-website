@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import hiveLogo from "../assets/hive-logo.png";
+---
+
+<section id="hero" class="h-screen px-[30px] flex flex-col justify-center">
+  <div class="flex flex-col gap-y-[30px]">
+    <Image src={hiveLogo} alt="Hive logo" />
+    <div>
+      <h1 class="text-white font-semibold text-[28px] leading-[39px]">
+        Otkrijte Najbolje Tim Bilding Aktivnosti
+      </h1>
+      <p class="text-white mt-[10px]">
+        Vaš partner za nezaboravna iskustva! Pomažemo vam da kreirate savršene
+        timske aktivnosti koje povezuju vaš tim i jačaju saradnju.
+      </p>
+    </div>
+    <button class="bg-[#BF02C9] rounded-[20px] w-full py-5">
+      <span class="text-white font-semibold">Projekti</span>
+    </button>
+  </div>
+</section>
