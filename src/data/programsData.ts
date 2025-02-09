@@ -4,10 +4,10 @@ export const items = [
     participants: "10-50",
     duration: "4h",
     activities: [
-      { title: "challenge 1" },
-      { title: "challenge 2" },
-      { title: "challenge 3" },
-      { title: "challenge 4" },
+      { title: "njušo 1" },
+      { title: "njušo 2" },
+      { title: "njušo 3" },
+      { title: "njušo 4" },
     ],
   },
   {
@@ -15,10 +15,10 @@ export const items = [
     participants: "10-50",
     duration: "4h",
     activities: [
-      { title: "challenge 1" },
-      { title: "challenge 2" },
-      { title: "challenge 3" },
-      { title: "challenge 4" },
+      { title: "njušo 1" },
+      { title: "njušo 2" },
+      { title: "njušo 3" },
+      { title: "njušo 4" },
     ],
   },
   {
@@ -26,10 +26,10 @@ export const items = [
     participants: "10-50",
     duration: "4h",
     activities: [
-      { title: "challenge 1" },
-      { title: "challenge 2" },
-      { title: "challenge 3" },
-      { title: "challenge 4" },
+      { title: "njušo 1" },
+      { title: "njušo 2" },
+      { title: "njušo 3" },
+      { title: "njušo 4" },
     ],
   },
 ];
