@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Work Sans Variable", ...defaultTheme.fontFamily.sans],
+        mono: ["Space Mono", ...defaultTheme.fontFamily.mono],
       },
     },
   },
