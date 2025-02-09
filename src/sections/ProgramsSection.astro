@@ -1,5 +1,7 @@
 ---
-import ProgramCard from "../components/ProgramCard.astro";
+import Carousel from "../components/Carousel";
+
+import { items } from "../data/programsData";
 ---
 
 <section
@@ -15,6 +17,11 @@ import ProgramCard from "../components/ProgramCard.astro";
         Pogledajte naše najtraženije tim bilding aktivnosti.
       </p>
     </div>
-    <ProgramCard />
+    <div id="carousel-wrapper">
+      <Carousel
+        client:load
+        slides={items.map((item) => ({ type: "program", data: item }))}
+      />
+    </div>
   </div>
 </section>

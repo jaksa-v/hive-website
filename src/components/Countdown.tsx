@@ -1,14 +1,25 @@
-import { h } from "preact";
-import { useState, useEffect } from "preact/hooks";
+import { useState, useEffect, useCallback } from "preact/hooks";
 
-const Countdown = (props) => {
-  // Use targetDate prop if provided, otherwise use default date
-  const targetDate = props.targetDate ? new Date(props.targetDate) : new Date("2025-12-31T23:59:59");
+interface CountdownProps {
+  targetDate?: string;
+}
+
+interface TimeLeft {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
+const Countdown = ({ targetDate }: CountdownProps) => {
+  const targetDateTime = targetDate
+    ? new Date(targetDate)
+    : new Date("2025-12-31T23:59:59");
 
   // Helper function to calculate remaining time
-  const getTimeLeft = () => {
+  const getTimeLeft = useCallback((): TimeLeft => {
     const now = new Date();
-    const diff = targetDate - now;
+    const diff = targetDateTime.getTime() - now.getTime();
     if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     return {
       days: Math.floor(diff / (1000 * 60 * 60 * 24)),
@@ -16,7 +27,7 @@ const Countdown = (props) => {
       minutes: Math.floor((diff / (1000 * 60)) % 60),
       seconds: Math.floor((diff / 1000) % 60),
     };
-  };
+  }, [targetDateTime]);
 
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
@@ -25,7 +36,7 @@ const Countdown = (props) => {
       setTimeLeft(getTimeLeft());
     }, 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDateTime]);
 
   return (
     <div className="font-mono text-white p-[30px] bg-[#BF02C9]/25 backdrop-blur-sm rounded-[20px]">
@@ -51,7 +62,7 @@ const Countdown = (props) => {
           <span className="text-xs">Sekund</span>
         </div>
       </div>
-      {targetDate - new Date() <= 0 ? (
+      {targetDateTime.getTime() - new Date().getTime() <= 0 ? (
         <div className="text-4xl font-bold font-sans mt-4">Time's up!</div>
       ) : (
         <></>
