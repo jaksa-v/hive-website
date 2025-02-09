@@ -41,7 +41,7 @@ export default function Carousel({ slides }: CarouselProps) {
               type: "spring",
               stiffness: 400,
               damping: 25,
-              duration: 0.5,
+              duration: 0.8,
             }}
             className="w-full absolute left-0 right-0"
           >
