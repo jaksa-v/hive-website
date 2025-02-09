@@ -1,11 +1,13 @@
 ---
+import CategoryCard from "../components/CategoryCard.astro";
+
 const items = [
-  "Escape Room",
-  "Sportske igre",
-  "Kulturne igre",
-  "Radionice i edukacije",
-  "Virtuelne aktivnosti",
-  "Humanitarni projekti",
+  { title: "Escape Room", color: "bg-[#ffc5c5]" },
+  { title: "Sportske igre", color: "bg-[#c5ffc5]" },
+  { title: "Kulturne igre", color: "bg-[#ffe6cc]" },
+  { title: "Radionice i edukacije", color: "bg-[#c5d9f1]" },
+  { title: "Virtuelne aktivnosti", color: "bg-[#ffc5e6]" },
+  { title: "Humanitarni projekti", color: "bg-[#d9f1ff]" },
 ];
 ---
 
@@ -20,7 +22,11 @@ const items = [
       </h1>
     </div>
     <div class="grid grid-cols-2 gap-5">
-      {items.map((item) => <div>{item}</div>)}
+      {
+        items.map((item) => (
+          <CategoryCard title={item.title} bgColor={item.color} />
+        ))
+      }
     </div>
   </div>
 </section>
