@@ -1,6 +1,5 @@
 ---
 import Carousel from "../components/Carousel";
-
 import { items } from "../data/programsData";
 ---
 
@@ -19,7 +18,7 @@ import { items } from "../data/programsData";
     </div>
     <div id="carousel-wrapper">
       <Carousel
-        client:load
+        client:only="react"
         slides={items.map((item) => ({ type: "program", data: item }))}
       />
     </div>

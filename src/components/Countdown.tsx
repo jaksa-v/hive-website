@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "preact/hooks";
+import { useState, useEffect, useCallback } from "react";
 
 interface CountdownProps {
   targetDate?: string;
