@@ -1,16 +1,30 @@
+---
+import { Image } from "astro:assets";
+import infoIcon from "../assets/info-icon.png";
+import InstagramIcon from "../components/InstagramIcon.astro";
+import YouTubeIcon from "../components/YouTubeIcon.astro";
+---
+
 <section
   id="footer"
-  class="h-[calc(100vh-56px)] bg-[#3B3B3B] px-[30px] flex flex-col justify-center"
+  class="h-[470px] bg-[#3B3B3B] px-[30px] flex flex-col justify-center"
 >
   <div class="flex flex-col gap-y-[30px]">
     <div>
-      <p class="text-white mt-[10px]">
+      <Image class="h-12 w-12" src={infoIcon} alt="Hive logo" />
+    </div>
+    <div class="flex flex-col gap-y-[20px]">
+      <p class="text-[#ccc]">
         Profesionalna organizacija tim bilding događaja za kompanije svih
         veličina.
       </p>
-      <p class="text-white mt-[10px]">
+      <p class="text-[#ccc]">
         Povežite se s nama i pratite najnovije aktivnosti!
       </p>
+      <div class="flex gap-x-[10px]">
+        <YouTubeIcon />
+        <InstagramIcon />
+      </div>
     </div>
     <button class="bg-[#BF02C9] rounded-[20px] w-full py-3">
       <span class="text-white font-semibold">Prijavi se</span>
