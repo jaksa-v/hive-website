@@ -17,7 +17,7 @@ export default function ProgramCard({ item }: ProgramCardProps) {
   const { title, participants, duration, activities } = item;
 
   return (
-    <div className="bg-[#1E1E1E] rounded-[18px] flex flex-col p-4 border border-1 border-[#02C9BF] cursor-pointer">
+    <div className="bg-[#1E1E1E] rounded-[18px] flex flex-col p-4 border border-1 border-[#02C9BF] cursor-pointer transition-all duration-300 hover:shadow-[inset_0_0_15px_rgba(2,201,191,0.3)]">
       <div className="rounded-[18px] flex flex-col relative h-[306px]">
         <img
           className="absolute inset-0 w-full h-full object-cover rounded-[18px]"

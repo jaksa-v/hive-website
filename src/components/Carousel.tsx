@@ -28,26 +28,43 @@ export default function Carousel({ slides }: CarouselProps) {
   };
 
   return (
-    <div className="relative w-full">
-      <div className="overflow-hidden relative h-[500px]">
+    <div className="relative w-full mx-auto">
+      <div className="overflow-hidden relative h-[450px] px-4 md:px-8">
         <AnimatePresence initial={false}>
           <motion.div
             key={currentIndex}
             custom={currentIndex}
-            initial={{ x: 1000 }}
-            animate={{ x: 0 }}
-            exit={{ x: -1000 }}
+            initial={{ opacity: 0, x: 1000 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -1000 }}
             transition={{
-              type: "spring",
-              stiffness: 400,
-              damping: 25,
-              duration: 0.8,
+              type: "tween",
+              duration: 0.3,
             }}
             className="w-full absolute left-0 right-0"
           >
-            <div className="px-4">
+            <div className="hidden md:flex w-full">
+              {[0, 1, 2].map((offset) => {
+                const index = (currentIndex + offset) % itemCount;
+                return (
+                  <div
+                    key={index}
+                    className="w-[calc(33.333%-1rem)] shrink-0 first:ml-0 ml-4"
+                  >
+                    <div>
+                      {slides[index].type === "program" && (
+                        <ProgramCard item={slides[index].data} />
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="md:hidden w-full">
               {slides[currentIndex].type === "program" && (
-                <ProgramCard item={slides[currentIndex].data} />
+                <div className="px-4">
+                  <ProgramCard item={slides[currentIndex].data} />
+                </div>
               )}
             </div>
           </motion.div>

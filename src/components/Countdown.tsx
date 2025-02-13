@@ -39,27 +39,27 @@ const Countdown = ({ targetDate }: CountdownProps) => {
   }, [targetDateTime]);
 
   return (
-    <div className="font-mono text-white p-[30px] bg-[#BF02C9]/25 backdrop-blur-sm rounded-[20px]">
-      <span className="text-xs">Počinje za:</span>
-      <div className="flex justify-around mt-2">
+    <div className="font-mono text-white p-[20px] md:p-[30px] bg-[#BF02C9]/25 backdrop-blur-sm rounded-[20px] md:max-w-[500px]">
+      <span className="text-xs md:text-sm">Počinje za:</span>
+      <div className="flex justify-around mt-2 md:mt-4">
         <div className="flex flex-col justify-center items-center">
-          <span className="text-4xl font-bold">{timeLeft.days}</span>
-          <span className="text-xs">Dan</span>
+          <span className="text-3xl md:text-5xl lg:text-6xl font-bold">{timeLeft.days}</span>
+          <span className="text-[10px] md:text-sm mt-1">Dan</span>
         </div>
-        <div className="text-3xl font-bold font-sans">:</div>
+        <div className="text-2xl md:text-4xl lg:text-5xl font-bold font-sans self-start">:</div>
         <div className="flex flex-col justify-center items-center">
-          <span className="text-4xl font-bold">{timeLeft.hours}</span>
-          <span className="text-xs">Sat</span>
+          <span className="text-3xl md:text-5xl lg:text-6xl font-bold">{timeLeft.hours}</span>
+          <span className="text-[10px] md:text-sm mt-1">Sat</span>
         </div>
-        <div className="text-3xl font-bold font-sans">:</div>
+        <div className="text-2xl md:text-4xl lg:text-5xl font-bold font-sans self-start">:</div>
         <div className="flex flex-col justify-center items-center">
-          <span className="text-4xl font-bold">{timeLeft.minutes}</span>
-          <span className="text-xs">Minut</span>
+          <span className="text-3xl md:text-5xl lg:text-6xl font-bold">{timeLeft.minutes}</span>
+          <span className="text-[10px] md:text-sm mt-1">Minut</span>
         </div>
-        <div className="text-3xl font-bold font-sans">:</div>
+        <div className="text-2xl md:text-4xl lg:text-5xl font-bold font-sans self-start">:</div>
         <div className="flex flex-col justify-center items-center">
-          <span className="text-4xl font-bold">{timeLeft.seconds}</span>
-          <span className="text-xs">Sekund</span>
+          <span className="text-3xl md:text-5xl lg:text-6xl font-bold">{timeLeft.seconds}</span>
+          <span className="text-[10px] md:text-sm mt-1">Sekund</span>
         </div>
       </div>
       {targetDateTime.getTime() - new Date().getTime() <= 0 ? (
