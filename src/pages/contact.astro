@@ -1,0 +1,12 @@
+---
+import ContactForm from "../components/ContactForm";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div
+    class="min-h-screen max-w-screen-lg mx-auto px-[30px] md:px-0 flex flex-col justify-center"
+  >
+    <ContactForm client:load />
+  </div>
+</Layout>

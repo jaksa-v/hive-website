@@ -2,6 +2,9 @@
 import "@fontsource-variable/work-sans";
 import MobileNavigation from "../components/MobileNavigation.jsx";
 import DesktopNavigation from "../components/DesktopNavigation.astro";
+
+// Only load Partytown in production
+const loadPartytown = import.meta.env.PROD;
 ---
 
 <!doctype html>
@@ -11,19 +14,23 @@ import DesktopNavigation from "../components/DesktopNavigation.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <script
-      is:inline
-      type="text/partytown"
-      src="https://www.googletagmanager.com/gtag/js?id=G-MKXRH3GCYL"></script>
-    <script is:inline type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+    {loadPartytown && (
+      <>
+        <script
+          is:inline
+          type="text/partytown"
+          src="https://www.googletagmanager.com/gtag/js?id=G-MKXRH3GCYL"></script>
+        <script is:inline type="text/partytown">
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
 
-      gtag("config", "G-MKXRH3GCYL");
-    </script>
+          gtag("config", "G-MKXRH3GCYL");
+        </script>
+      </>
+    )}
     <title>HIVE</title>
   </head>
   <body class="font-sans bg-[#2B2B2B]">
