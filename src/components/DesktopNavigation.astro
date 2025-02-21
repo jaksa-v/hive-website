@@ -1,4 +1,6 @@
 ---
+import hiveLogo from "../assets/hive-logo-nav.png";
+
 const navigationItems = [
   { label: "Naslovna", url: "/" },
   { label: "Projekti", url: "/projects" },
@@ -13,33 +15,30 @@ const currentPath = Astro.url.pathname;
   class="fixed border-0.5 border-b border-gray-500 top-0 left-0 right-0 z-50 bg-[#2B2B2B] w-full hidden md:block px-[50px] py-4"
 >
   <div class="flex justify-between items-center max-w-screen-lg mx-auto">
-    <span class="text-white font-bold text-2xl">HIVE</span>
+    <a href="/">
+      <img class="h-10 w-10" src={hiveLogo.src} alt="Hive logo" />
+    </a>
     <ul class="flex gap-x-4 items-center">
       {
         navigationItems.map((item) => (
-          <li
+          <a
+            href={item.url}
             class:list={[
-              "rounded-[20px] px-4 py-2 cursor-pointer group transition-transform duration-200 hover:scale-105",
+              "rounded-[20px] px-4 py-2 cursor-pointer group transition-transform duration-200 hover:scale-105 block",
               { "bg-[#BF02C9] px-8 py-3": item.label === "Kontakt" },
+              "font-semibold",
+              {
+                "text-[#d3d3d3] hover:text-white":
+                  currentPath !== item.url && item.label !== "Kontakt",
+              },
+              { "text-white": currentPath === item.url },
+              {
+                "text-white": item.label === "Kontakt",
+              },
             ]}
           >
-            <a
-              href={item.url}
-              class:list={[
-                "font-semibold",
-                {
-                  "text-[#d3d3d3] group-hover:text-white":
-                    currentPath !== item.url && item.label !== "Kontakt",
-                },
-                { "text-white": currentPath === item.url },
-                {
-                  "text-white group-hover:text-white": item.label === "Kontakt",
-                },
-              ]}
-            >
-              {item.label}
-            </a>
-          </li>
+            {item.label}
+          </a>
         ))
       }
     </ul>

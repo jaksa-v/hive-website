@@ -30,7 +30,7 @@ export const ContactForm: React.FC = () => {
   }
 
   return (
-    <section className="pt-8 pb-10 max-w-sm mx-auto">
+    <section className="pt-8 pb-10 px-[30px] md:px-0 max-w-sm mx-auto">
       <div className="w-full text-black">
         <div className="w-full">
           <h1 className="text-white flex-1 shrink gap-2.5 w-full text-4xl font-semibold leading-10 capitalize">

@@ -1,12 +1,15 @@
 ---
 import ContactForm from "../components/ContactForm";
 import Layout from "../layouts/Layout.astro";
+import image from "../assets/contact-image.png";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
   <div
-    class="min-h-screen max-w-screen-lg mx-auto px-[30px] md:px-0 flex flex-col justify-center"
+    class="min-h-screen md:px-0 flex flex-col md:flex-row justify-center items-center"
   >
+    <Image class="max-w-screen-md w-full" src={image} alt="Contact image" />
     <ContactForm client:load />
   </div>
 </Layout>

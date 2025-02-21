@@ -2,6 +2,7 @@
 import "@fontsource-variable/work-sans";
 import MobileNavigation from "../components/MobileNavigation.jsx";
 import DesktopNavigation from "../components/DesktopNavigation.astro";
+import FooterSection from "../sections/FooterSection.astro";
 
 // Only load Partytown in production
 const loadPartytown = import.meta.env.PROD;
@@ -37,6 +38,7 @@ const loadPartytown = import.meta.env.PROD;
     <MobileNavigation />
     <DesktopNavigation />
     <slot />
+  <FooterSection />
   </body>
 </html>
 

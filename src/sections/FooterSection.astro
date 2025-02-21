@@ -7,7 +7,7 @@ import YouTubeIcon from "../components/YouTubeIcon.astro";
 
 <section
   id="footer"
-  class="h-[470px] bg-[#3B3B3B] px-[30px] flex flex-col justify-center"
+  class="py-10 bg-[#3B3B3B] px-[30px] flex flex-col justify-center"
 >
   <div class="flex flex-col gap-y-[30px] max-w-screen-lg mx-auto w-full">
     <div>
@@ -26,10 +26,12 @@ import YouTubeIcon from "../components/YouTubeIcon.astro";
         <InstagramIcon />
       </div>
     </div>
-    <button
-      class="bg-[#BF02C9] hover:bg-[#a102ac] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-[20px] w-full md:max-w-[200px] py-3"
-    >
-      <span class="text-white font-semibold">Prijavi se</span>
-    </button>
+    <a href="/contact">
+      <button
+        class="bg-[#BF02C9] hover:bg-[#a102ac] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-[20px] w-full md:max-w-[200px] py-3"
+      >
+        <span class="text-white font-semibold">Prijavi se</span>
+      </button>
+    </a>
   </div>
 </section>

@@ -4,7 +4,9 @@ import menuIcon from "../assets/menu-icon.png";
 export default function MobileNavigation() {
   return (
     <div className="flex md:hidden justify-between items-center fixed top-0 left-0 right-0 z-50 text-white py-2 px-4 bg-[#2B2B2B]/80 backdrop-blur-sm">
-      <img className="h-10 w-10" src={hiveLogo.src} alt="Hive logo" />
+      <a href="/">
+        <img className="h-10 w-10" src={hiveLogo.src} alt="Hive logo" />
+      </a>
       <img
         className="h-8 w-8 cursor-pointer"
         src={menuIcon.src}
