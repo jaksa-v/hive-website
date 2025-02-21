@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import hiveLogo from "../assets/hive-logo.png";
+---
+
+<Layout>
+  <div
+    class="min-h-screen max-w-screen-lg mx-auto px-[30px] md:px-0 flex flex-col space-y-8 md:space-y-10 justify-center items-center"
+  >
+    <Image
+      src={hiveLogo}
+      alt="Hive logo"
+      class="w-[200px] md:w-[250px] lg:w-[300px]"
+    />
+    <div class="flex flex-col gap-y-8 pb-10">
+      <h1
+        class="text-white font-semibold text-[28px] md:text-[36px] lg:text-[48px] leading-[1.4]"
+      >
+        O Nama
+      </h1>
+      <p
+        class="text-white mt-[10px] text-base md:text-lg lg:text-xl opacity-90"
+      >
+        Ova uzbudljiva avantura vodi timove kroz niz izazova, tragova i
+        zagonetki, sve s ciljem pronalaženja skrivenog blaga. Učesnici će
+        koristiti svoju snalažljivost, kreativnost i timski rad kako bi razbili
+        šifre, prevazišli prepreke i došli do cilja. Aktivnost je idealna za
+        razvoj komunikacije i strateškog razmišljanja, jer svaki tim mora
+        zajednički rešavati zadatke kako bi došao do sledećeg traga. Pored
+        zabave, učesnici će izgraditi poverenje, razviti liderstvo i ojačati
+        međusobnu saradnju. Svi izazovi su prilagođeni različitim nivoima
+        veština, tako da svi mogu doprineti i učestvovati.
+      </p>
+      <h2
+        class="text-white font-semibold text-[24px] md:text-[32px] lg:text-[36px] leading-[1.4]"
+      >
+        Pogledaj Šta Radimo!
+      </h2>
+
+      <a
+        href="/projects"
+        class="border-2 border-[#BF02C9] hover:bg-[#BF02C9] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-[20px] max-w-xs md:w-full md:px-8 py-4 flex gap-x-2 justify-center items-center group"
+      >
+        <svg
+          width="21"
+          height="20"
+          viewBox="0 0 21 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M3 10C3 9.65482 3.27982 9.375 3.625 9.375H17.375C17.7202 9.375 18 9.65482 18 10C18 10.3452 17.7202 10.625 17.375 10.625H3.625C3.27982 10.625 3 10.3452 3 10Z"
+            fill="#BF02C9"
+            class="group-hover:fill-white transition-all duration-300"></path>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M11.3081 3.93306C11.5521 3.68898 11.9479 3.68898 12.1919 3.93306L17.8169 9.55806C18.061 9.80214 18.061 10.1979 17.8169 10.4419L12.1919 16.0669C11.9479 16.311 11.5521 16.311 11.3081 16.0669C11.064 15.8229 11.064 15.4271 11.3081 15.1831L16.4911 10L11.3081 4.81694C11.064 4.57286 11.064 4.17714 11.3081 3.93306Z"
+            fill="#BF02C9"
+            class="group-hover:fill-white transition-all duration-300"></path>
+        </svg>
+
+        <span class="text-white font-semibold">Posjeti kategorije</span>
+      </a>
+    </div>
+  </div>
+</Layout>
