@@ -13,17 +13,21 @@ interface CarouselProps {
 
 export default function Carousel({ slides }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0); // -1 for left, 1 for right
   const itemCount = slides.length;
 
   const goToPrevious = () => {
+    setDirection(-1);
     setCurrentIndex((prevIndex) => (prevIndex - 1 + itemCount) % itemCount);
   };
 
   const goToNext = () => {
+    setDirection(1);
     setCurrentIndex((prevIndex) => (prevIndex + 1) % itemCount);
   };
 
   const goToSlide = (index: number) => {
+    setDirection(index > currentIndex ? 1 : -1);
     setCurrentIndex(index);
   };
 
@@ -34,9 +38,9 @@ export default function Carousel({ slides }: CarouselProps) {
           <motion.div
             key={currentIndex}
             custom={currentIndex}
-            initial={{ opacity: 0, x: 1000 }}
+            initial={{ opacity: 0, x: direction * 1000 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -1000 }}
+            exit={{ opacity: 0, x: direction * -1000 }}
             transition={{
               type: "tween",
               duration: 0.3,
