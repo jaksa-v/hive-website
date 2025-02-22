@@ -75,25 +75,25 @@ export default function MobileNavigation() {
               href="/"
               className="text-white hover:bg-white/10 py-3 px-4 text-lg font-medium rounded-[20px] transition-colors duration-200 bg-white/5 backdrop-blur-sm"
             >
-              Home
+              Naslovna
+            </a>
+            <a
+              href="/categories"
+              className="text-white hover:bg-white/10 py-3 px-4 text-lg font-medium rounded-[20px] transition-colors duration-200 bg-white/5 backdrop-blur-sm"
+            >
+              Kategorije
             </a>
             <a
               href="/about"
               className="text-white hover:bg-white/10 py-3 px-4 text-lg font-medium rounded-[20px] transition-colors duration-200 bg-white/5 backdrop-blur-sm"
             >
-              About
-            </a>
-            <a
-              href="/services"
-              className="text-white hover:bg-white/10 py-3 px-4 text-lg font-medium rounded-[20px] transition-colors duration-200 bg-white/5 backdrop-blur-sm"
-            >
-              Services
+              O nama
             </a>
             <a
               href="/contact"
               className="text-white hover:bg-white/10 py-3 px-4 text-lg font-medium rounded-[20px] transition-colors duration-200 bg-white/5 backdrop-blur-sm"
             >
-              Contact
+              Kontakt
             </a>
           </nav>
         </div>
