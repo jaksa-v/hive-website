@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import image from "../assets/project-image.png";
+---
+
+<Layout>
+  <div class="min-h-[calc(100vh-56px)] flex flex-col mt-[56px] md:mt-[81px]">
+    <Image
+      class="h-[250px] md:h-[320px] w-full object-cover"
+      src={image}
+      alt="Contact image"
+    />
+    <div
+      class="flex flex-col gap-y-8 py-10 px-[30px] md:px-0 max-w-screen-lg mx-auto"
+    >
+      <h1
+        class="text-white font-semibold text-[28px] md:text-[36px] lg:text-[48px] leading-[1.4]"
+      >
+        Avantura 3 u 1
+      </h1>
+      <div>
+        <p
+          class="font-mono text-gray-300 text-[20px] md:text-[24px] lg:text-[32px] leading-[1.4]"
+        >
+          Detaljnije
+        </p>
+        <p
+          class="text-white mt-[10px] text-base md:text-lg lg:text-xl opacity-90"
+        >
+          Avanturističke aktivnosti pružaju nezaboravna iskustva kroz dinamične
+          i uzbudljive izazove u prirodi. Bilo da je reč o splavarenju,
+          planinarenju, zipline avanturama ili kanjoningu, ove aktivnosti jačaju
+          timski duh, podstiču saradnju i testiraju granice izdržljivosti
+          učesnika. Uz adrenalin i nepredvidive situacije, timovi razvijaju
+          poverenje, snalažljivost i zajednički strateški pristup rešavanju
+          zadataka. Idealno za kompanije koje žele da svoje zaposlene izvuku iz
+          zone komfora i podstaknu ih na aktivnu međusobnu podršku kroz
+          nezaboravne avanture.
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>
