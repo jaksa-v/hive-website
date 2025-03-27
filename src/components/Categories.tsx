@@ -89,7 +89,7 @@ export default function Categories({
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 my-4">
         <div
           onClick={() => handleCategoryClick("Sve")}
-          className={`relative bg-[#1A1A1A] rounded-lg p-3 cursor-pointer transition-colors ${
+          className={`relative bg-[#1A1A1A] rounded-lg flex items-center p-3 cursor-pointer transition-colors ${
             activeCategory === "Sve"
               ? "bg-[#252525] ring-2 ring-[#BF02C9]"
               : "hover:bg-[#252525]"
@@ -100,7 +100,7 @@ export default function Categories({
             }`,
           }}
         >
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center w-full">
             <h3 className="text-white text-sm md:text-base font-medium">Sve</h3>
             <span className="text-white text-base md:text-lg font-semibold">
               {activities.length}
@@ -111,7 +111,7 @@ export default function Categories({
           <div
             key={category.id}
             onClick={() => handleCategoryClick(category.name)}
-            className={`relative bg-[#1A1A1A] rounded-lg p-3 cursor-pointer transition-colors ${
+            className={`relative bg-[#1A1A1A] rounded-lg flex items-center p-3 cursor-pointer transition-colors ${
               activeCategory === category.name
                 ? "bg-[#252525] ring-2 ring-[#BF02C9]"
                 : "hover:bg-[#252525]"
@@ -122,7 +122,7 @@ export default function Categories({
               }`,
             }}
           >
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center w-full">
               <h3 className="text-white text-sm md:text-base font-medium">
                 {category.name}
               </h3>
@@ -155,20 +155,21 @@ export default function Categories({
                 {item.title}
               </h3>
               <div className="flex items-center gap-3 mb-3">
-                {(() => {
-                  if (!item.category) return null;
-                  const category = categories.find(
-                    (cat) => cat.id.toString() === item.category.id
-                  );
-                  return category ? (
-                    <span
-                      key={category.id}
-                      className="text-sm bg-[#252525] text-white px-2 py-1 rounded-full"
-                    >
-                      {category.name}
-                    </span>
-                  ) : null;
-                })()}
+                {activeCategory === "Sve" &&
+                  (() => {
+                    if (!item.category) return null;
+                    const category = categories.find(
+                      (cat) => cat.id.toString() === item.category.id
+                    );
+                    return category ? (
+                      <span
+                        key={category.id}
+                        className="text-sm bg-[#252525] text-white px-2 py-1 rounded-full"
+                      >
+                        {category.name}
+                      </span>
+                    ) : null;
+                  })()}
                 {item.outdoor ? (
                   <span className="text-sm bg-emerald-900/40 text-emerald-300 px-2 py-1 rounded-full">
                     Outdoor
