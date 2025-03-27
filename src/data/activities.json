@@ -8,7 +8,7 @@
     "duration": "3-4 sata",
     "audience": "Firma/Public",
     "number_of_participatns": 40,
-    "picture": "src/assets/activities/avanturisticki park.jpg"
+    "picture": "../src/assets/activities/avanturisticki park.jpg"
   },
   {
     "id": 4,
@@ -19,7 +19,7 @@
     "duration": "2-3 sata",
     "audience": "Firma",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/druzenje sa psima.jpg"
+    "picture": "../src/assets/activities/druzenje sa psima.jpg"
   },
   {
     "id": 5,
@@ -30,7 +30,7 @@
     "duration": "2-3 sata",
     "audience": "Firma/Public",
     "number_of_participatns": 50,
-    "picture": "src/assets/activities/bioskop.jpg"
+    "picture": "../src/assets/activities/bioskop.jpg"
   },
   {
     "id": 6,
@@ -41,7 +41,7 @@
     "duration": "5-6 sati",
     "audience": "Firma/Public",
     "number_of_participatns": 50,
-    "picture": "src/assets/activities/krstarenje.jpg"
+    "picture": "../src/assets/activities/krstarenje.jpg"
   },
   {
     "id": 7,
@@ -52,7 +52,7 @@
     "duration": "2-3 sata",
     "audience": "Firma",
     "number_of_participatns": 30,
-    "picture": "src/assets/activities/capture the flag.png"
+    "picture": "../src/assets/activities/capture the flag.png"
   },
   {
     "id": 8,
@@ -63,7 +63,7 @@
     "duration": "2-3 sata",
     "audience": "Firma",
     "number_of_participatns": 50,
-    "picture": "src/assets/activities/sadnja drveca.jpg"
+    "picture": "../src/assets/activities/sadnja drveca.jpg"
   },
   {
     "id": 9,
@@ -74,7 +74,7 @@
     "duration": "2-3 sata",
     "audience": "Firma/Public",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/druzenje sa psima.jpg"
+    "picture": "../src/assets/activities/druzenje sa psima.jpg"
   },
   {
     "id": 10,
@@ -85,7 +85,7 @@
     "duration": "2-3 sata",
     "audience": "Firma/Public",
     "number_of_participatns": 40,
-    "picture": "src/assets/activities/eko radionice.jpg"
+    "picture": "../src/assets/activities/eko radionice.jpg"
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "duration": "2-3 sata",
     "audience": "Public",
     "number_of_participatns": 40,
-    "picture": "src/assets/activities/mission impssible.jpg"
+    "picture": "../src/assets/activities/mission impssible.jpg"
   },
   {
     "id": 12,
@@ -107,7 +107,7 @@
     "duration": "1-2 sata",
     "audience": "Public",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/escape room.png"
+    "picture": "../src/assets/activities/escape room.png"
   },
   {
     "id": 13,
@@ -118,7 +118,7 @@
     "duration": "2-3 sata",
     "audience": "Public",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/jahanje.jpg"
+    "picture": "../src/assets/activities/jahanje.jpg"
   },
   {
     "id": 14,
@@ -129,7 +129,7 @@
     "duration": "12+ sati (obično 1-2 dana)",
     "audience": "Firma",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/kampovanje.jpg"
+    "picture": "../src/assets/activities/kampovanje.jpg"
   },
   {
     "id": 15,
@@ -140,7 +140,7 @@
     "duration": "4-6 sati",
     "audience": "Firma",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/kanjoning.jpg"
+    "picture": "../src/assets/activities/kanjoning.jpg"
   },
   {
     "id": 16,
@@ -151,7 +151,7 @@
     "duration": "2-3 sata",
     "audience": "Public",
     "number_of_participatns": 25,
-    "picture": "src/assets/activities/korporativna radionoica.jpg"
+    "picture": "../src/assets/activities/korporativna radionoica.jpg"
   },
   {
     "id": 17,
@@ -162,7 +162,7 @@
     "duration": "2-3 sata",
     "audience": "Public",
     "number_of_participatns": 15,
-    "picture": "src/assets/activities/slikanje.jpg"
+    "picture": "../src/assets/activities/slikanje.jpg"
   },
   {
     "id": 18,
@@ -173,7 +173,7 @@
     "duration": "3-5 sati",
     "audience": "Public",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/krstarenje skadarsko.jpg"
+    "picture": "../src/assets/activities/krstarenje skadarsko.jpg"
   },
   {
     "id": 19,
@@ -184,7 +184,7 @@
     "duration": "2-3 sata",
     "audience": "Public",
     "number_of_participatns": 30,
-    "picture": "src/assets/activities/slikanje.jpg"
+    "picture": "../src/assets/activities/slikanje.jpg"
   },
   {
     "id": 20,
@@ -195,7 +195,7 @@
     "duration": "8-12 sati",
     "audience": "Firma/Public",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/nocno kampovanje.jpg"
+    "picture": "../src/assets/activities/nocno kampovanje.jpg"
   },
   {
     "id": 21,
@@ -206,7 +206,7 @@
     "duration": "4-6 sati",
     "audience": "Firma",
     "number_of_participatns": 100,
-    "picture": "src/assets/activities/Organizacija sportskog turnira.jpg"
+    "picture": "../src/assets/activities/Organizacija sportskog turnira.jpg"
   },
   {
     "id": 22,
@@ -217,7 +217,7 @@
     "duration": "3-4 sata",
     "audience": "Public",
     "number_of_participatns": 50,
-    "picture": "src/assets/activities/treasure hunt.jpg"
+    "picture": "../src/assets/activities/treasure hunt.jpg"
   },
   {
     "id": 23,
@@ -228,7 +228,7 @@
     "duration": "2-3 sata",
     "audience": "Firma",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/slikanje.jpg"
+    "picture": "../src/assets/activities/slikanje.jpg"
   },
   {
     "id": 24,
@@ -239,7 +239,7 @@
     "duration": "6-8 sati",
     "audience": "Firma/Public",
     "number_of_participatns": 30,
-    "picture": "src/assets/activities/Planinarska tura.jpg"
+    "picture": "../src/assets/activities/Planinarska tura.jpg"
   },
   {
     "id": 25,
@@ -250,7 +250,7 @@
     "duration": "3-5 sati",
     "audience": "Firma/Public",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/Posjeta lokalnim selima.jpg"
+    "picture": "../src/assets/activities/Posjeta lokalnim selima.jpg"
   },
   {
     "id": 26,
@@ -261,7 +261,7 @@
     "duration": "3-4 sata",
     "audience": "Firma",
     "number_of_participatns": 30,
-    "picture": "src/assets/activities/Posjeta vinarijama.jpg"
+    "picture": "../src/assets/activities/Posjeta vinarijama.jpg"
   },
   {
     "id": 27,
@@ -272,7 +272,7 @@
     "duration": "2-3 sata",
     "audience": "Public",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/Posmatranje zvijezda.jpg"
+    "picture": "../src/assets/activities/Posmatranje zvijezda.jpg"
   },
   {
     "id": 28,
@@ -283,7 +283,7 @@
     "duration": "3-4 sata",
     "audience": "Firma",
     "number_of_participatns": 10,
-    "picture": "src/assets/activities/Pub Crawling.jpg"
+    "picture": "../src/assets/activities/Pub Crawling.jpg"
   },
   {
     "id": 29,
@@ -294,7 +294,7 @@
     "duration": "3-4 sata",
     "audience": "Firma",
     "number_of_participatns": 30,
-    "picture": "src/assets/activities/Radionica _Digital Detox_.png"
+    "picture": "../src/assets/activities/Radionica _Digital Detox_.png"
   },
   {
     "id": 30,
@@ -305,7 +305,7 @@
     "duration": "2-3 sata",
     "audience": "Firma",
     "number_of_participatns": 30,
-    "picture": "src/assets/activities/Radionica _Digital Detox_.png"
+    "picture": "../src/assets/activities/Radionica _Digital Detox_.png"
   },
   {
     "id": 31,
@@ -316,7 +316,7 @@
     "duration": "2-3 sata",
     "audience": "Firma",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/Radionica _Upravljanje konfliktima_.jpg"
+    "picture": "../src/assets/activities/Radionica _Upravljanje konfliktima_.jpg"
   },
   {
     "id": 32,
@@ -327,7 +327,7 @@
     "duration": "2-3 sata",
     "audience": "Public",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/Radionica izrade rukotvorina.jpg"
+    "picture": "../src/assets/activities/Radionica izrade rukotvorina.jpg"
   },
   {
     "id": 33,
@@ -338,7 +338,7 @@
     "duration": "2-3 sata",
     "audience": "Firma",
     "number_of_participatns": 50,
-    "picture": "src/assets/activities/Radionica korporativnih vrijednosti.jpg"
+    "picture": "../src/assets/activities/Radionica korporativnih vrijednosti.jpg"
   },
   {
     "id": 34,
@@ -349,7 +349,7 @@
     "duration": "3-4 sata",
     "audience": "Firma",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/Rafting.jpg"
+    "picture": "../src/assets/activities/Rafting.jpg"
   },
   {
     "id": 35,
@@ -360,7 +360,7 @@
     "duration": "4-5 sati",
     "audience": "Firma",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/leadership.jpg"
+    "picture": "../src/assets/activities/leadership.jpg"
   },
   {
     "id": 36,
@@ -371,7 +371,7 @@
     "duration": "3-4 sata",
     "audience": "Firma",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/Simulacija kriznog menadžmenta.jpeg"
+    "picture": "../src/assets/activities/Simulacija kriznog menadžmenta.jpeg"
   },
   {
     "id": 37,
@@ -382,7 +382,7 @@
     "duration": "3-4 sata",
     "audience": "Public",
     "number_of_participatns": 50,
-    "picture": "src/assets/activities/Splavarska misija.jpg"
+    "picture": "../src/assets/activities/Splavarska misija.jpg"
   },
   {
     "id": 38,
@@ -393,7 +393,7 @@
     "duration": "1,5-2 sata",
     "audience": "Firma/Public",
     "number_of_participatns": 30,
-    "picture": "src/assets/activities/streljana.jpg"
+    "picture": "../src/assets/activities/streljana.jpg"
   },
   {
     "id": 39,
@@ -404,7 +404,7 @@
     "duration": "5-6 sati",
     "audience": "Public",
     "number_of_participatns": 50,
-    "picture": "src/assets/activities/survival.jpg"
+    "picture": "../src/assets/activities/survival.jpg"
   },
   {
     "id": 40,
@@ -415,7 +415,7 @@
     "duration": "3-5 sati",
     "audience": "Firma",
     "number_of_participatns": 40,
-    "picture": "src/assets/activities/Team building na vodi.jpg"
+    "picture": "../src/assets/activities/Team building na vodi.jpg"
   },
   {
     "id": 41,
@@ -426,7 +426,7 @@
     "duration": "3-4 sata",
     "audience": "Public",
     "number_of_participatns": 50,
-    "picture": "src/assets/activities/slikanje.jpg"
+    "picture": "../src/assets/activities/slikanje.jpg"
   },
   {
     "id": 42,
@@ -437,7 +437,7 @@
     "duration": "2-3 sata",
     "audience": "Firma",
     "number_of_participatns": 100,
-    "picture": "src/assets/activities/treasure hunt.jpg"
+    "picture": "../src/assets/activities/treasure hunt.jpg"
   },
   {
     "id": 43,
@@ -448,7 +448,7 @@
     "duration": "3-4 sata",
     "audience": "Public",
     "number_of_participatns": 30,
-    "picture": "src/assets/activities/Turnir u paintballu.jpg"
+    "picture": "../src/assets/activities/Turnir u paintballu.jpg"
   },
   {
     "id": 44,
@@ -459,7 +459,7 @@
     "duration": "3-5 sati",
     "audience": "Firma",
     "number_of_participatns": 20,
-    "picture": "src/assets/activities/via ferata.jpg"
+    "picture": "../src/assets/activities/via ferata.jpg"
   },
   {
     "id": 45,
@@ -470,7 +470,7 @@
     "duration": "1-2 sata",
     "audience": "Firma",
     "number_of_participatns": 30,
-    "picture": "src/assets/activities/izgradnja splava.jpg"
+    "picture": "../src/assets/activities/izgradnja splava.jpg"
   },
   {
     "id": 46,
@@ -481,6 +481,6 @@
     "duration": "1-2 sata",
     "audience": "Firma/Public",
     "number_of_participatns": 30,
-    "picture": "src/assets/activities/zipline.jpg"
+    "picture": "../src/assets/activities/zipline.jpg"
   }
 ]
