@@ -14,7 +14,10 @@ export default function Categories({
   const categoriesWithCounts = categories.map((category) => ({
     id: category.id,
     name: category.name,
-    count: activities.filter((activity) => activity.category && activity.category.id === category.id.toString()).length,
+    count: activities.filter(
+      (activity) =>
+        activity.category && activity.category.id === category.id.toString()
+    ).length,
     color: "#808080",
     isSelected: category.name === activeCategory,
   }));
@@ -23,8 +26,14 @@ export default function Categories({
     activeCategory === "Sve"
       ? activities
       : activities.filter((activity) => {
-          const categoryObj = categories.find(cat => cat.name === activeCategory);
-          return categoryObj && activity.category && activity.category.id === categoryObj.id.toString();
+          const categoryObj = categories.find(
+            (cat) => cat.name === activeCategory
+          );
+          return (
+            categoryObj &&
+            activity.category &&
+            activity.category.id === categoryObj.id.toString()
+          );
         });
 
   const searchedItems = filteredItems.filter((item) =>
@@ -127,15 +136,18 @@ export default function Categories({
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {searchedItems.map((item, index) => (
-          <div key={index} className="bg-[#1A1A1A] rounded-lg overflow-hidden flex flex-col h-full transition-transform hover:scale-[1.02] hover:shadow-lg">
+          <div
+            key={index}
+            className="bg-[#1A1A1A] rounded-lg overflow-hidden flex flex-col h-full transition-transform hover:scale-[1.02] hover:shadow-lg"
+          >
             {item.picture && (
               <div className="relative w-full aspect-video overflow-hidden">
-                <img 
-                  src={item.picture} 
+                <img
+                  src={item.picture}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform hover:scale-105" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent h-16"></div>
+                {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent h-16"></div> */}
               </div>
             )}
             <div className="p-4 flex-1 flex flex-col">
@@ -145,7 +157,9 @@ export default function Categories({
               <div className="flex items-center gap-3 mb-3">
                 {(() => {
                   if (!item.category) return null;
-                  const category = categories.find(cat => cat.id.toString() === item.category.id);
+                  const category = categories.find(
+                    (cat) => cat.id.toString() === item.category.id
+                  );
                   return category ? (
                     <span
                       key={category.id}
@@ -156,9 +170,13 @@ export default function Categories({
                   ) : null;
                 })()}
                 {item.outdoor ? (
-                  <span className="text-sm bg-emerald-900/40 text-emerald-300 px-2 py-1 rounded-full">Outdoor</span>
+                  <span className="text-sm bg-emerald-900/40 text-emerald-300 px-2 py-1 rounded-full">
+                    Outdoor
+                  </span>
                 ) : (
-                  <span className="text-sm bg-blue-900/40 text-blue-300 px-2 py-1 rounded-full">Indoor</span>
+                  <span className="text-sm bg-blue-900/40 text-blue-300 px-2 py-1 rounded-full">
+                    Indoor
+                  </span>
                 )}
               </div>
               <p className="text-gray-300 text-sm line-clamp-3 mb-3">
