@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Sportske aktivnosti"
+  },
+  {
+    "id": 2,
+    "name": "Zabavne igre"
+  },
+  {
+    "id": 3,
+    "name": "Kreativne aktivnosti"
+  },
+  {
+    "id": 4,
+    "name": "Kulturne aktivnosti"
+  },
+  {
+    "id": 5,
+    "name": "Edukativne aktivnosti"
+  },
+  {
+    "id": 6,
+    "name": "Avantura"
+  }
+]

@@ -1,21 +1,31 @@
 import { useState } from "react";
-import { items, categories as categoryNames } from "../data/activitiesData";
+import type { InferEntrySchema } from "astro:content";
 
-export default function Categories() {
+export default function Categories({
+  categories,
+  activities,
+}: {
+  categories: InferEntrySchema<"categories">[];
+  activities: InferEntrySchema<"activities">[];
+}) {
   const [activeCategory, setActiveCategory] = useState<string>("Sve");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const categories = categoryNames.map((name) => ({
-    name,
-    count: items.filter((item) => item.categories.includes(name)).length,
+  const categoriesWithCounts = categories.map((category) => ({
+    id: category.id,
+    name: category.name,
+    count: activities.filter((activity) => activity.category && activity.category.id === category.id.toString()).length,
     color: "#808080",
-    isSelected: name === activeCategory,
+    isSelected: category.name === activeCategory,
   }));
 
   const filteredItems =
     activeCategory === "Sve"
-      ? items
-      : items.filter((item) => item.categories.includes(activeCategory));
+      ? activities
+      : activities.filter((activity) => {
+          const categoryObj = categories.find(cat => cat.name === activeCategory);
+          return categoryObj && activity.category && activity.category.id === categoryObj.id.toString();
+        });
 
   const searchedItems = filteredItems.filter((item) =>
     item.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -84,13 +94,13 @@ export default function Categories() {
           <div className="flex justify-between items-center">
             <h3 className="text-white text-sm md:text-base font-medium">Sve</h3>
             <span className="text-white text-base md:text-lg font-semibold">
-              {items.length}
+              {activities.length}
             </span>
           </div>
         </div>
-        {categories.map((category) => (
+        {categoriesWithCounts.map((category) => (
           <div
-            key={category.name}
+            key={category.id}
             onClick={() => handleCategoryClick(category.name)}
             className={`relative bg-[#1A1A1A] rounded-lg p-3 cursor-pointer transition-colors ${
               activeCategory === category.name
@@ -122,14 +132,18 @@ export default function Categories() {
               {item.title}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {item.categories.map((cat, catIndex) => (
-                <span
-                  key={catIndex}
-                  className="text-sm bg-[#252525] text-white px-2 py-1 rounded"
-                >
-                  {cat}
-                </span>
-              ))}
+              {(() => {
+                if (!item.category) return null;
+                const category = categories.find(cat => cat.id.toString() === item.category.id);
+                return category ? (
+                  <span
+                    key={category.id}
+                    className="text-sm bg-[#252525] text-white px-2 py-1 rounded"
+                  >
+                    {category.name}
+                  </span>
+                ) : null;
+              })()}
             </div>
           </div>
         ))}

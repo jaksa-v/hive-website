@@ -1,8 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CategoriesComponent from "../components/Categories";
+import { getCollection } from "astro:content";
+
+const [categories, activities] = await Promise.all([
+  getCollection("categories"),
+  getCollection("activities"),
+]);
 ---
 
 <Layout>
-  <CategoriesComponent client:load />
+  <CategoriesComponent client:load categories={categories.map(category => category.data)} activities={activities.map(activity => activity.data)} />
 </Layout>
