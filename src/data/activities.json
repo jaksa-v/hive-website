@@ -7,7 +7,8 @@
     "description": "Spremite se za adrenalinsku avanturu koja testira vašu spretnost, ravnotežu i hrabrost! Avanturistički park nudi niz izazova – viseće mostove, zip-line staze, prepreke na visini i još mnogo toga. Savršen je za one koji žele da pomjere svoje granice i uživaju u aktivnoj zabavi u prirodi. Aktivnost podstiče timski duh, samopouzdanje i fizičku izdržljivost, dok pruža nezaboravno iskustvo puno uzbuđenja.",
     "duration": "3-4 sata",
     "audience": "Firma/Public",
-    "number_of_participatns": 40
+    "number_of_participatns": 40,
+    "picture": "src/assets/activities/avanturisticki park.jpg"
   },
   {
     "id": 4,
@@ -17,7 +18,8 @@
     "description": "Ova aktivnost pruža priliku da upoznate životinje koje čekaju svoj dom, dok kroz razgovor sa volonterima saznajte više o njihovim pričama i potrebama. Obilazak azila je odličan način da se povežete sa životinjama i doprinesete njihovoj dobrobiti, bilo kroz donacije, volonterski rad ili jednostavno pružanje ljubavi i pažnje. Aktivnost pruža emotivno ispunjenje i priliku da učinite razliku u životima ovih divnih stvorenja.",
     "duration": "2-3 sata",
     "audience": "Firma",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/druzenje sa psima.jpg"
   },
   {
     "id": 5,
@@ -27,7 +29,8 @@
     "description": "Uživajte u filmu pod zvjezdanim nebom! Ova opuštajuća aktivnost donosi nezaboravno iskustvo gledanja omiljenih filmova na otvorenom, uz dobru atmosferu i društvo. Odabrani filmovi, bilo da su to klasični hitovi ili najnoviji blockbustery, omogućavaju uživanje u kinima na potpuno drugačiji način. Savršen način za opuštanje i zabavu pod vedrim nebom, sa prijateljima ili porodicom.",
     "duration": "2-3 sata",
     "audience": "Firma/Public",
-    "number_of_participatns": 50
+    "number_of_participatns": 50,
+    "picture": "src/assets/activities/bioskop.jpg"
   },
   {
     "id": 6,
@@ -37,7 +40,8 @@
     "description": "Krenite na nezaboravnu avanturu kroz jedan od najlepših zaliva na svijetu. Otkrijte čarobne primorske gradove, vijugave kamene ulice i bogatu istoriju dok istražujete skrivene kutke Boke Kotorske. Tokom ture, uživaćete u spektakularnim panoramskim pogledima, lokalnim delicijama i autentičnoj atmosferi primorskog života. Savršena prilika za spoj kulture, prirode i opuštanja u jedinstvenom ambijentu.",
     "duration": "5-6 sati",
     "audience": "Firma/Public",
-    "number_of_participatns": 50
+    "number_of_participatns": 50,
+    "picture": "src/assets/activities/krstarenje.jpg"
   },
   {
     "id": 7,
@@ -47,7 +51,8 @@
     "description": "Taktička igra koja kombinuje strategiju, brzinu i timski rad! Dva tima se takmiče u osvajanju protivničke zastave dok istovremeno brane svoju. Akcija, skrivanje, trčanje i donošenje brzih odluka čine ovu aktivnost uzbudljivom i dinamičnom. Idealna za jačanje timske koordinacije i adrenalinsku zabavu u prirodi ili na prilagođenom terenu. Da li ste spremni da osmislite najbolju taktiku i odnesete pobedu?",
     "duration": "2-3 sata",
     "audience": "Firma",
-    "number_of_participatns": 30
+    "number_of_participatns": 30,
+    "picture": "src/assets/activities/capture the flag.png"
   },
   {
     "id": 8,
@@ -57,7 +62,8 @@
     "description": "Ova ekološka aktivnost pruža učesnicima priliku da se direktno uključe u očuvanje prirode kroz sadnju drveća. Kroz grupnu akciju, učesnici će naučiti važnost zelene infrastrukture i održivog razvoja, a istovremeno će doprineti unapređenju životne sredine. Aktivnost promoviše zajedništvo, ekološku odgovornost i dugoročni uticaj na poboljšanje kvaliteta života u zajednici.",
     "duration": "2-3 sata",
     "audience": "Firma",
-    "number_of_participatns": 50
+    "number_of_participatns": 50,
+    "picture": "src/assets/activities/sadnja drveca.jpg"
   },
   {
     "id": 9,
@@ -67,7 +73,8 @@
     "description": "Ova aktivnost omogućava učesnicima da provedu vreme sa životinjama u prihvatilištu van Podgorice, pružajući im priliku da se povežu s napuštenim i zlostavljanim životinjama. Kroz hranjenje, igru i brigu o životinjama, učesnici će naučiti o odgovornosti i važnosti zaštite životinja. Aktivnost donosi radost učesnicima, ali i životinjama, stvarajući emotivnu povezanost i podstičući ljubav prema životinjama.",
     "duration": "2-3 sata",
     "audience": "Firma/Public",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/druzenje sa psima.jpg"
   },
   {
     "id": 10,
@@ -77,7 +84,8 @@
     "description": "Ekološke radionice omogućavaju učesnicima da se upuste u praktične aktivnosti koje promovišu održivost i očuvanje prirode. Kroz sadnju biljaka, reciklažu, izradu ekoloških proizvoda i druge ekološke inicijative, polaznici će naučiti kako da smanje svoj ekološki otisak i doprinesu zaštiti životne sredine. Aktivnost pruža vredne veštine, podstiče timsku saradnju i podiže svest o važnosti ekološke odgovornosti.",
     "duration": "2-3 sata",
     "audience": "Firma/Public",
-    "number_of_participatns": 40
+    "number_of_participatns": 40,
+    "picture": "src/assets/activities/eko radionice.jpg"
   },
   {
     "id": 11,
@@ -87,7 +95,8 @@
     "description": "Izazovite svoje snalažljive sposobnosti u prirodi kroz jedinstveni escape izazov! Učesnici će se kretati kroz kompleksan prirodni labirint, tražeći tragove i rješenja koja vode ka izlazu. Timovi moraju da sarađuju, koriste mapu i logiku kako bi što brže našli put do slobode. Ova avantura testira sposobnost donošenja odluka pod pritiskom, komunikaciju i timsku koordinaciju, sve dok uživate u prirodnom okruženju.",
     "duration": "2-3 sata",
     "audience": "Public",
-    "number_of_participatns": 40
+    "number_of_participatns": 40,
+    "picture": "src/assets/activities/mission impssible.jpg"
   },
   {
     "id": 12,
@@ -97,7 +106,8 @@
     "description": "Spremite se za mentalnu avanturu koja će testirati vaš timski rad, kreativnost i sposobnost donošenja odluka pod pritiskom! Učesnici će biti zatvoreni u prostoriji punoj zagonetki, skrivenih tragova i misteroznih predmeta, te će morati da sarađuju kako bi rešili sve zagonetke i izašli pre isteka vremena. Ovaj izazov podstiče komunikaciju, kritičko razmišljanje i povezanost među članovima tima. Hoćete li uspeti da se oslobodite na vreme?",
     "duration": "1-2 sata",
     "audience": "Public",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/escape room.png"
   },
   {
     "id": 13,
@@ -107,7 +117,8 @@
     "description": "Krenite na nezaboravnu jahačku avanturu kroz prirodu, istražujući mirne staze i uživajući u ljepoti okoline. Tura je pogodna za sve uzraste i nivoe iskustva, od početnika do onih sa više iskustva. Ova aktivnost omogućava opuštanje, povezanost sa konjima i prirodom, te pruža priliku za razvijanje samopouzdanja i stvaranje snažnih veza sa životinjama.",
     "duration": "2-3 sata",
     "audience": "Public",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/jahanje.jpg"
   },
   {
     "id": 14,
@@ -117,7 +128,8 @@
     "description": "Doživite prirodu na potpuno nov način kroz kampovanje pod zvezdama. Uz logorsku vatru, pripremanje hrane na otvorenom i noćno uživanje u miru prirode, ova aktivnost pruža savršen trenutak za opuštanje i povezivanje sa sobom i timom. Kampovanje uključuje različite aktivnosti, poput mini igara i vođenih tura, koje omogućavaju jačanje timskog duha i sticanje novih veština u prirodnom okruženju.",
     "duration": "12+ sati (obično 1-2 dana)",
     "audience": "Firma",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/kampovanje.jpg"
   },
   {
     "id": 15,
@@ -127,7 +139,8 @@
     "description": "Ovaj uzbudljiv izazov vodi vas kroz prirodne kanjone, gdje ćete kombinovati hodanje, penjanje, skakanje u vodu i spuštanje niz vodopade. Kanjoning je savršen način da istražite skrivene kutke prirode, testirate svoje fizičke sposobnosti i uživate u divljim vodama. Aktivnost zahteva timsku saradnju i hrabrost, a svaki korak donosi novu dozu adrenalina i uzbuđenja u prirodnom okruženju.",
     "duration": "4-6 sati",
     "audience": "Firma",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/kanjoning.jpg"
   },
   {
     "id": 16,
@@ -137,7 +150,8 @@
     "description": "Ove radionice pružaju priliku da unapredite komunikacijske veštine kroz interaktivne igre, simulacije i grupne zadatke. Kroz različite tehnike i vežbe, učesnici će naučiti kako efikasno slušati, jasno izražavati misli i rešavati konflikte. Aktivnost je idealna za poboljšanje međuljudskih odnosa, jačanje tima i povećanje produktivnosti u radnom okruženju. Povežite se, učite i razvijajte komunikacijske veštine koje vode ka uspehu.",
     "duration": "2-3 sata",
     "audience": "Public",
-    "number_of_participatns": 25
+    "number_of_participatns": 25,
+    "picture": "src/assets/activities/korporativna radionoica.jpg"
   },
   {
     "id": 17,
@@ -147,7 +161,8 @@
     "description": "Ova radionica kombinuje umetnost i opuštanje, pružajući učesnicima priliku da se izraze kroz slikanje uz čašu dobrog vina. Kroz kreativne tehnike i slobodno izražavanje, učesnici će kreirati svoja umetnička dela, dok se opuštaju i uživaju u društvu. Aktivnost je savršen način da se opustite, oslobodite stresa i uživate u procesu stvaranja, stvarajući jedinstvene uspomene i dela.",
     "duration": "2-3 sata",
     "audience": "Public",
-    "number_of_participatns": 15
+    "number_of_participatns": 15,
+    "picture": "src/assets/activities/slikanje.jpg"
   },
   {
     "id": 18,
@@ -157,7 +172,8 @@
     "description": "Doživite prirodnu ljepotu Skadarskog jezera na nezaboravnom krstarenju. Plovidba po mirnim vodama omogućava vam da uživate u pogledu na netaknutu prirodu, posetite slikovite ostrva i upoznate bogatu faunu. Ova aktivnost pruža opuštanje i savršen način za istraživanje jedne od najlepših prirodnih destinacija, dok istovremeno pruža priliku za timsku interakciju i uživanje u prelepim pejzažima.",
     "duration": "3-5 sati",
     "audience": "Public",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/krstarenje skadarsko.jpg"
   },
   {
     "id": 19,
@@ -167,7 +183,8 @@
     "description": "Ova aktivnost izaziva učesnike da istraže okolinu i zabeleže specifične scene, predmete ili trenutke kroz fotografiju. Učesnici dobijaju listu zadataka koji ih vode kroz kreativnu potragu za savršenim kadrom. Aktivnost podstiče timsku saradnju, kreativnost i pažljiviji pogled na detalje u okolini, dok istovremeno omogućava stvaranje nezaboravnih uspomena kroz objektiv kamere.",
     "duration": "2-3 sata",
     "audience": "Public",
-    "number_of_participatns": 30
+    "number_of_participatns": 30,
+    "picture": "src/assets/activities/slikanje.jpg"
   },
   {
     "id": 20,
@@ -177,7 +194,8 @@
     "description": "Doživite prirodu na potpuno drugačiji način uz noćni kamp. Pod zvezdama, uživaćete u kampovanju uz logorsku vatru, pripremanju hrane na otvorenom i mini igrama koje će dodatno zbližiti tim. Aktivnost uključuje orijentaciju u noćnim uslovima i zabavne izazove, pružajući priliku za razvijanje timskog duha, vještina preživljavanja i stvaranje nezaboravnih uspomena.",
     "duration": "8-12 sati",
     "audience": "Firma/Public",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/nocno kampovanje.jpg"
   },
   {
     "id": 21,
@@ -187,7 +205,8 @@
     "description": "Oživite takmičarski duh kroz profesionalno organizovan sportski turnir po vašem izboru! Bilo da je u pitanju fudbal, košarka, odbojka ili neka druga disciplina, kreiramo dinamično okruženje sa jasnim pravilima, sudijama i zabavnom atmosferom. Turnir podstiče timski rad, fer-plej i zdravu konkurenciju, dok učesnici uživaju u sportskom duhu i zajedničkoj energiji. Spremite se za nezaboravno takmičenje!",
     "duration": "4-6 sati",
     "audience": "Firma",
-    "number_of_participatns": 100
+    "number_of_participatns": 100,
+    "picture": "src/assets/activities/Organizacija sportskog turnira.jpg"
   },
   {
     "id": 22,
@@ -197,7 +216,8 @@
     "description": "Testirajte svoje snalaženje u prirodi uz uzbudljiv izazov orijentiringa! Učesnici, opremljeni mapama i zadacima, kreću u potragu za označenim tačkama, oslanjajući se na timski rad, logiku i osećaj za prostor. Staza vodi kroz prelepe pejzaže, dok svaki tim pokušava da pronađe najbrži put do cilja. Aktivnost je savršen spoj avanture, strategije i rekreacije, pružajući nezaboravno iskustvo u prirodi.",
     "duration": "3-4 sata",
     "audience": "Public",
-    "number_of_participatns": 50
+    "number_of_participatns": 50,
+    "picture": "src/assets/activities/treasure hunt.jpg"
   },
   {
     "id": 23,
@@ -207,7 +227,8 @@
     "description": "Opustite se uz umjetnost i čašu dobrog vina! Ova kreativna radionica pruža savršenu priliku da oslobodite svoju maštu dok slikate i uživate u prijatnom društvu. Bez obzira na vaše iskustvo, kroz laganu i inspirativnu atmosferu, svaki učesnik će moći da stvori svoje jedinstveno umjetničko djelo. Idealna aktivnost za relaksaciju, kreativno izražavanje i nezaboravne trenutke uz vino i dobro raspoloženje.",
     "duration": "2-3 sata",
     "audience": "Firma",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/slikanje.jpg"
   },
   {
     "id": 24,
@@ -217,7 +238,8 @@
     "description": "Ova planinarska tura vodi vas kroz spektakularne planinske staze, pružajući priliku za istraživanje netaknute prirode, uživanje u pogledu na okolne vrhove i mirnim predelima. Učesnici će savladavati različite vrste terena, učeći o orijentaciji, timskoj saradnji i prevazilaženju prepreka. Aktivnost je odlična za ljubitelje prirode i avantura, a ujedno omogućava opuštanje, fizičku aktivnost i jačanje međusobnih veza u timu.",
     "duration": "6-8 sati",
     "audience": "Firma/Public",
-    "number_of_participatns": 30
+    "number_of_participatns": 30,
+    "picture": "src/assets/activities/Planinarska tura.jpg"
   },
   {
     "id": 25,
@@ -227,7 +249,8 @@
     "description": "Uputite se na nezaboravno putovanje kroz lokalna sela i otkrijte autentičan način života. Kroz razgovore sa meštanima, obići ćete tradicionalne kuće, prozore u prošlost i uživati u lokalnim specijalitetima. Aktivnost pruža priliku da se povežete s kulturnim nasleđem i tradicijama ovog kraja, dok istražujete prirodne ljepote i jedinstvenu atmosferu tih mirnih, netaknutih zajednica.",
     "duration": "3-5 sati",
     "audience": "Firma/Public",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/Posjeta lokalnim selima.jpg"
   },
   {
     "id": 26,
@@ -237,7 +260,8 @@
     "description": "Otkrijte tajne vinogradarstva i uživajte u čarima lokalnih vina kroz posjetu vrhunskim vinarijama. Prošetajte među redovima vinove loze, saznajte sve o procesu proizvodnje vina, a zatim uživajte u degustaciji najboljih sorti koje ova regija nudi. Ova aktivnost je savršen način da se opustite, uživate u prirodi i otkrijete bogatstvo ukusa, sve uz edukativnu dimenziju koja vas povezuje s tradicijom i kulturom vinogradarstva.",
     "duration": "3-4 sata",
     "audience": "Firma",
-    "number_of_participatns": 30
+    "number_of_participatns": 30,
+    "picture": "src/assets/activities/Posjeta vinarijama.jpg"
   },
   {
     "id": 27,
@@ -247,7 +271,8 @@
     "description": "Krenite na čarobno putovanje kroz noćno nebo, otkrivajući sazvežđa, planete i druge tajne svemira. Aktivnost uključuje vođene posmatračke sesije, gdje ćete uživati u tišini prirode i diviti se lepoti zvezda. Ova opuštajuća avantura pruža priliku da se povežete sa univerzumom, naučite više o astronomskoj terminologiji i uživate u jedinstvenoj atmosferi pod zvezdama.",
     "duration": "2-3 sata",
     "audience": "Public",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/Posmatranje zvijezda.jpg"
   },
   {
     "id": 28,
@@ -257,7 +282,8 @@
     "description": "Krenite u nezaboravnu noćnu avanturu istražujući najbolje barove i pabove! Ova organizovana tura vodi vas kroz odabrane lokacije, gdje ćete uživati u odličnim pićima, igricama, dobroj muzici i opuštenoj atmosferi. Svako mjesto donosi drugačiji doživljaj – od autentičnih lokalnih pabova do modernih koktel barova. Idealna prilika za druženje, upoznavanje novih ljudi i provod koji ćete dugo pamtiti!",
     "duration": "3-4 sata",
     "audience": "Firma",
-    "number_of_participatns": 10
+    "number_of_participatns": 10,
+    "picture": "src/assets/activities/Pub Crawling.jpg"
   },
   {
     "id": 29,
@@ -267,7 +293,8 @@
     "description": "Ova radionica nudi učesnicima priliku da se povežu sa sobom i svojim timom bez digitalnih distrakcija. Kroz aktivnosti koje uključuju diskusije, grupne igre i praktične zadatke, učesnici će naučiti kako da uspostave zdrav odnos sa tehnologijom, poboljšaju koncentraciju i izgrade bolje međuljudske odnose. Aktivnost pomaže u smanjenju stresa i vraćanju fokusa na stvarne, neposredne interakcije.",
     "duration": "3-4 sata",
     "audience": "Firma",
-    "number_of_participatns": 30
+    "number_of_participatns": 30,
+    "picture": "src/assets/activities/Radionica _Digital Detox_.png"
   },
   {
     "id": 30,
@@ -277,7 +304,8 @@
     "description": "Ova radionica fokusira se na razvoj veština efikasne komunikacije u stresnim i kriznim situacijama. Kroz simulacije i praktične vežbe, učesnici će naučiti kako da ostanu smireni, jasno izraze svoje misli i donesu odluke pod pritiskom. Aktivnost omogućava poboljšanje sposobnosti za brzo reagovanje, jasnu komunikaciju i održavanje profesionalnog stava u izazovnim okolnostima.",
     "duration": "2-3 sata",
     "audience": "Firma",
-    "number_of_participatns": 30
+    "number_of_participatns": 30,
+    "picture": "src/assets/activities/Radionica _Digital Detox_.png"
   },
   {
     "id": 31,
@@ -287,7 +315,8 @@
     "description": "Ova radionica nudi učesnicima alate i tehnike za efikasno rešavanje konflikata u profesionalnom i ličnom okruženju. Kroz simulacije, diskusije i vežbe, polaznici će naučiti kako prepoznati uzroke nesuglasica, komunicirati bez tenzija i nalaziti obostrano prihvatljiva rešenja. Aktivnost doprinosi izgradnji veće tolerancije, boljih međuljudskih odnosa i sposobnosti za konstruktivno rešavanje nesuglasica.",
     "duration": "2-3 sata",
     "audience": "Firma",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/Radionica _Upravljanje konfliktima_.jpg"
   },
   {
     "id": 32,
@@ -297,7 +326,8 @@
     "description": "Ova radionica pruža učesnicima priliku da se upuste u svet kreativnosti kroz izradu rukotvorina. Kroz praktične vežbe, učesnici će naučiti tehnike izrade različitih predmeta, od nakita do dekorativnih predmeta, koristeći prirodne materijale. Aktivnost podstiče maštovitost, poboljšava manuelne veštine i omogućava učesnicima da izrade personalizovane proizvode, a sve to u opuštenoj atmosferi.",
     "duration": "2-3 sata",
     "audience": "Public",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/Radionica izrade rukotvorina.jpg"
   },
   {
     "id": 33,
@@ -307,7 +337,8 @@
     "description": "Ova radionica pomaže učesnicima da bolje razumeju i implementiraju temeljne korporativne vrednosti u svakodnevnom radu. Kroz interaktivne aktivnosti i grupne diskusije, polaznici će se upoznati sa principima koji oblikuju organizacijsku kulturu, naučiti kako ih uskladiti sa timskim ciljevima i primeniti u svakodnevnim izazovima. Aktivnost jača zajedništvo, angažman i zajednički fokus na zajedničke vrednosti.",
     "duration": "2-3 sata",
     "audience": "Firma",
-    "number_of_participatns": 50
+    "number_of_participatns": 50,
+    "picture": "src/assets/activities/Radionica korporativnih vrijednosti.jpg"
   },
   {
     "id": 34,
@@ -317,7 +348,8 @@
     "description": "Ovaj rafting izazov pruža uzbudljivu vožnju kroz brze reke, testirajući snalažljivost, timsku koordinaciju i fizičku izdržljivost. Timovi će zajedno savladavati izazove na vodi, upravljajući čamcima kroz turbulentne delove reke. Aktivnost je savršen način za jačanje međusobnog poverenja, poboljšanje komunikacije i izgradnju snažnih timskih veza u prirodnom okruženju.",
     "duration": "3-4 sata",
     "audience": "Firma",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/Rafting.jpg"
   },
   {
     "id": 35,
@@ -327,7 +359,8 @@
     "description": "Škola liderstva pruža učesnicima alate i tehnike za razvoj liderkih veština kroz interaktivne radionice, grupne diskusije i simulacije. Polaznici će naučiti kako motivisati tim, donositi strateške odluke, rešavati konflikte i izgraditi poverenje. Aktivnost je fokusirana na praktičnu primenu liderstva u različitim situacijama, pružajući polaznicima veštine za efikasno vođenje tima i postizanje ciljeva.",
     "duration": "4-5 sati",
     "audience": "Firma",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/leadership.jpg"
   },
   {
     "id": 36,
@@ -337,7 +370,8 @@
     "description": "Ova aktivnost omogućava učesnicima da kroz simulacije kriznih situacija testiraju svoje sposobnosti donošenja odluka pod pritiskom. Kroz scenarije koji uključuju različite krizne izazove, timovi će razvijati strategije, komunicirati i donosiće brze odluke kako bi rešavali problem i minimizirali rizike. Aktivnost pomaže u jačanju sposobnosti upravljanja krizama, timske koordinacije i upravljanja stresom.",
     "duration": "3-4 sata",
     "audience": "Firma",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/Simulacija kriznog menadžmenta.jpeg"
   },
   {
     "id": 37,
@@ -347,7 +381,8 @@
     "description": "Ova uzbudljiva aktivnost testira timsku koordinaciju i kreativnost! Učesnici koriste drvene balvane, konopce i plutajuće materijale za izgradnju improviziranih splavova. Nakon što splav bude gotov, timovi kreću u izazov plovidbe, gdje snalažljivost, komunikacija i timski rad odlučuju o uspjehu. Ova aktivnost savršen je način za izgradnju povjerenja i zajedništva u timu!",
     "duration": "3-4 sata",
     "audience": "Public",
-    "number_of_participatns": 50
+    "number_of_participatns": 50,
+    "picture": "src/assets/activities/Splavarska misija.jpg"
   },
   {
     "id": 38,
@@ -357,7 +392,8 @@
     "description": "Testirajte svoju preciznost i koncentraciju u kontrolisanim условima streljane! Učesnici imaju priliku da okušaju svoju vještinu gađanja i poboljšaju fokus dok ciljaju mete s različitih udaljenosti. Aktivnost zahtijeva strpljenje, mirnu ruku i dobru koordinaciju, a istovremeno pruža uzbuđenje i takmičarski duh. Savršena prilika za izazov i zabavu u bezbjednom i profesionalno organizovanom okruženju.",
     "duration": "1,5-2 sata",
     "audience": "Firma/Public",
-    "number_of_participatns": 30
+    "number_of_participatns": 30,
+    "picture": "src/assets/activities/streljana.jpg"
   },
   {
     "id": 39,
@@ -367,7 +403,8 @@
     "description": "U ovoj izazovnoj aktivnosti, učesnici se upuštaju u simulaciju preživljavanja u prirodi. Naučiće osnovne veštine kao što su izrada skloništa, loženje vatre i snalaženje u prirodi, sve pod stručnim vodstvom. Timovi će koristiti resurse i sarađivati kako bi opstali u izazovnim uslovima. Aktivnost je odlična za razvijanje snalažljivosti, prilagodljivosti i timske koordinacije.",
     "duration": "5-6 sati",
     "audience": "Public",
-    "number_of_participatns": 50
+    "number_of_participatns": 50,
+    "picture": "src/assets/activities/survival.jpg"
   },
   {
     "id": 40,
@@ -377,7 +414,8 @@
     "description": "Ojačajte timski duh kroz uzbudljive vodene izazove! Bilo da je u pitanju veslanje, izgradnja splava, kajak trke ili koordinacione igre na vodi, učesnici će morati da sarađuju, komuniciraju i donose brze odluke kako bi ostvarili zajednički cilj. Ova aktivnost podstiče povjerenje, strategijsko razmišljanje i zajedništvo, dok istovremeno pruža nezaboravan provod u osvježavajućem okruženju.",
     "duration": "3-5 sati",
     "audience": "Firma",
-    "number_of_participatns": 40
+    "number_of_participatns": 40,
+    "picture": "src/assets/activities/Team building na vodi.jpg"
   },
   {
     "id": 41,
@@ -387,7 +425,8 @@
     "description": "Doživite čaroliju noći uz tematski maskenbal koji spaja zabavu, kreativnost i elegantne kostime! Odaberite svoju omiljenu temu, od fantastičnih likova do istorijskih epoha, i prepustite se nezaboravnom iskustvu maskiranih plesova i igara. Aktivnost je savršen način da se opustite, povežete sa kolegama i prijateljima, te uživate u maštovitom okruženju koje će zasigurno stvoriti jedinstvene uspomene.",
     "duration": "3-4 sata",
     "audience": "Public",
-    "number_of_participatns": 50
+    "number_of_participatns": 50,
+    "picture": "src/assets/activities/slikanje.jpg"
   },
   {
     "id": 42,
@@ -397,7 +436,8 @@
     "description": "Ova uzbudljiva avantura vodi timove kroz niz izazova, tragova i zagonetki, sve s ciljem pronalaženja skrivenog blaga. Učesnici će koristiti svoju snalažljivost, kreativnost i timski rad kako bi razbili šifre, prevazišli prepreke i došli do cilja. Aktivnost je idealna za razvoj komunikacije i strateškog razmišljanja, jer svaki tim mora zajednički rešavati zadatke kako bi došao do sledećeg traga. Pored zabave, učesnici će izgraditi poverenje, razviti liderstvo i ojačati međusobnu saradnju. Svi izazovi su prilagođeni različitim nivoima veština, tako da svi mogu doprineti i učestvovati.",
     "duration": "2-3 sata",
     "audience": "Firma",
-    "number_of_participatns": 100
+    "number_of_participatns": 100,
+    "picture": "src/assets/activities/treasure hunt.jpg"
   },
   {
     "id": 43,
@@ -407,7 +447,8 @@
     "description": "Adrenalinska borba u kojoj taktika, brzina i timski duh odlučuju pobjednika! Timovi se suočavaju na posebno uređenom terenu, koristeći zaklone, strategiju i preciznost kako bi eliminisali protivnike i osvojili cilj. Svaka runda donosi novi izazov, a pobjeđuje ekipa koja pokaže najbolje reflekse i timsku koordinaciju. Savršena aktivnost za jačanje timskih veza i nezaboravnu avanturu punu akcije!",
     "duration": "3-4 sata",
     "audience": "Public",
-    "number_of_participatns": 30
+    "number_of_participatns": 30,
+    "picture": "src/assets/activities/Turnir u paintballu.jpg"
   },
   {
     "id": 44,
@@ -417,7 +458,8 @@
     "description": "Krenite na uzbudljivu tura kroz prirodu, prateći staze koje se uzdižu uz planinske vrhove i nude neverovatne poglede na okolne pejzaže. Ova lagana, ali dinamična avantura vodi vas kroz stene, omogućujući vam da istražite skrivene prirodne lepote i uživate u svakom koraku. Uživajte u miru planinskog okruženja, dok jačate timske veze i stvarate nezaboravne uspomene u prirodi.",
     "duration": "3-5 sati",
     "audience": "Firma",
-    "number_of_participatns": 20
+    "number_of_participatns": 20,
+    "picture": "src/assets/activities/via ferata.jpg"
   },
   {
     "id": 45,
@@ -427,7 +469,8 @@
     "description": "Ova kreativna vježba podstiče timsku saradnju, strateško razmišljanje i snalažljivost. Učesnici će imati zadatak da koriste ograničene materijale (kao što su papir, štapići, trakice i slično) kako bi izgradili što viši toranj. Tim koji izdrži test vremena i težine pobjeđuje. Aktivnost je odlična za razvijanje komunikacije, planiranja i zajedničkog rada, dok istovremeno nudi zabavu i izazov.",
     "duration": "1-2 sata",
     "audience": "Firma",
-    "number_of_participatns": 30
+    "number_of_participatns": 30,
+    "picture": "src/assets/activities/izgradnja splava.jpg"
   },
   {
     "id": 46,
@@ -437,6 +480,7 @@
     "description": "Ovaj adrenalinski izazov omogućava učesnicima da se spuste niz žičaru, leteći iznad prelepih pejzaža i prirodnih ljepota. Zipline pruža jedinstven doživljaj slobodnog leta i osvajanja visina, testirajući hrabrost i ljubav prema avanturama. Ova aktivnost je savršena za sve koji žele uzbuđenje i nezaboravno iskustvo.",
     "duration": "1-2 sata",
     "audience": "Firma/Public",
-    "number_of_participatns": 30
+    "number_of_participatns": 30,
+    "picture": "src/assets/activities/zipline.jpg"
   }
 ]

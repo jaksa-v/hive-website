@@ -21,6 +21,7 @@ const activities = defineCollection({
     duration: z.string(),
     audience: z.string(),
     number_of_participatns: z.number(),
+    picture: z.string().optional(),
   }),
 });
 

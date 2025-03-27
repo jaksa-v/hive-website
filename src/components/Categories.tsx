@@ -125,25 +125,56 @@ export default function Categories({
         ))}
       </div>
 
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {searchedItems.map((item, index) => (
-          <div key={index} className="bg-[#1A1A1A] rounded-lg p-4">
-            <h3 className="text-white text-lg font-medium mb-2">
-              {item.title}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {(() => {
-                if (!item.category) return null;
-                const category = categories.find(cat => cat.id.toString() === item.category.id);
-                return category ? (
-                  <span
-                    key={category.id}
-                    className="text-sm bg-[#252525] text-white px-2 py-1 rounded"
-                  >
-                    {category.name}
-                  </span>
-                ) : null;
-              })()}
+          <div key={index} className="bg-[#1A1A1A] rounded-lg overflow-hidden flex flex-col h-full transition-transform hover:scale-[1.02] hover:shadow-lg">
+            {item.picture && (
+              <div className="relative w-full aspect-video overflow-hidden">
+                <img 
+                  src={item.picture} 
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform hover:scale-105" 
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent h-16"></div>
+              </div>
+            )}
+            <div className="p-4 flex-1 flex flex-col">
+              <h3 className="text-white text-lg font-medium mb-2">
+                {item.title}
+              </h3>
+              <div className="flex items-center gap-3 mb-3">
+                {(() => {
+                  if (!item.category) return null;
+                  const category = categories.find(cat => cat.id.toString() === item.category.id);
+                  return category ? (
+                    <span
+                      key={category.id}
+                      className="text-sm bg-[#252525] text-white px-2 py-1 rounded-full"
+                    >
+                      {category.name}
+                    </span>
+                  ) : null;
+                })()}
+                {item.outdoor ? (
+                  <span className="text-sm bg-emerald-900/40 text-emerald-300 px-2 py-1 rounded-full">Outdoor</span>
+                ) : (
+                  <span className="text-sm bg-blue-900/40 text-blue-300 px-2 py-1 rounded-full">Indoor</span>
+                )}
+              </div>
+              <p className="text-gray-300 text-sm line-clamp-3 mb-3">
+                {item.description}
+              </p>
+              <div className="mt-auto flex flex-wrap gap-2">
+                <span className="text-xs bg-[#252525] text-gray-300 px-2 py-1 rounded">
+                  {item.duration}
+                </span>
+                <span className="text-xs bg-[#252525] text-gray-300 px-2 py-1 rounded">
+                  {item.audience}
+                </span>
+                <span className="text-xs bg-[#252525] text-gray-300 px-2 py-1 rounded">
+                  Do {item.number_of_participatns} učesnika
+                </span>
+              </div>
             </div>
           </div>
         ))}
