@@ -184,7 +184,7 @@
     "duration": "2-3 sata",
     "audience": "Public",
     "number_of_participatns": 30,
-    "picture": "/activities/slikanje.jpg"
+    "picture": "/activities/lov na fotografije.png"
   },
   {
     "id": 20,
@@ -383,17 +383,6 @@
     "audience": "Public",
     "number_of_participatns": 50,
     "picture": "/activities/Splavarska misija.jpg"
-  },
-  {
-    "id": 38,
-    "title": "Streljana ipak ne",
-    "category": "1",
-    "outdoor": true,
-    "description": "Testirajte svoju preciznost i koncentraciju u kontrolisanim условima streljane! Učesnici imaju priliku da okušaju svoju vještinu gađanja i poboljšaju fokus dok ciljaju mete s različitih udaljenosti. Aktivnost zahtijeva strpljenje, mirnu ruku i dobru koordinaciju, a istovremeno pruža uzbuđenje i takmičarski duh. Savršena prilika za izazov i zabavu u bezbjednom i profesionalno organizovanom okruženju.",
-    "duration": "1,5-2 sata",
-    "audience": "Firma/Public",
-    "number_of_participatns": 30,
-    "picture": "/activities/streljana.jpg"
   },
   {
     "id": 39,
