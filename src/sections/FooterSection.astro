@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import infoIcon from "../assets/info-icon.png";
 import InstagramIcon from "../components/InstagramIcon.astro";
 import YouTubeIcon from "../components/YouTubeIcon.astro";
+import LinkedInIcon from "../components/LinkedInIcon.astro";
 ---
 
 <section
@@ -21,9 +22,13 @@ import YouTubeIcon from "../components/YouTubeIcon.astro";
       <p class="text-[#ccc]">
         Povežite se s nama i pratite najnovije aktivnosti!
       </p>
-      <div class="flex gap-x-[10px]">
-        <YouTubeIcon />
-        <InstagramIcon />
+      <div class="flex items-center gap-x-[10px]">
+        <a href="https://www.instagram.com/hiveagency.me/" target="_blank">
+          <LinkedInIcon />
+        </a>
+        <a href="https://www.instagram.com/hiveagency.me/" target="_blank">
+          <InstagramIcon />
+        </a>
       </div>
     </div>
     <a href="/contact">

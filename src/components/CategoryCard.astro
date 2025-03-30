@@ -1,21 +1,33 @@
 ---
 import { Image } from "astro:assets";
 import placeholderIcon from "../assets/placeholder-icon.svg";
-const { title, bgColor } = Astro.props;
+
+const { category } = Astro.props;
+
+const imagePath = `/activities/${category.image}`;
 ---
 
-<div class="w-full h-[150px] rounded-[18px] flex flex-col hover:scale-105 transition-all duration-300 cursor-pointer">
+<a href={`/categories?category=${category.slug}`} class="w-full h-[300px] rounded-[18px] flex flex-col hover:scale-105 transition-all duration-300 cursor-pointer">
   <div
-    class:list={[
-      "flex-1 flex justify-center items-center rounded-t-[18px]",
-      bgColor,
-    ]}
+    style={{backgroundColor: category.color}}
+    class="flex-1 flex justify-center items-center rounded-t-[18px] relative overflow-hidden"
   >
-    <Image src={placeholderIcon} alt="" width={80} height={80} />
+    <!-- Background blurred image -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src={imagePath} 
+        alt="" 
+        class="w-full h-full object-cover opacity-40 filter blur-sm"
+      />
+    </div>
+    <!-- Icon on top -->
+    <div class="z-10 relative">
+      <Image src={placeholderIcon} alt="" width={80} height={80} />
+    </div>
   </div>
   <div
-    class="bg-[#3B3B3B] h-[54px] flex justify-center items-center px-2 rounded-b-[18px]"
+    class="bg-[#3B3B3B] h-20 flex justify-center items-center px-2 rounded-b-[18px]"
   >
-    <span class="text-white font-semibold text-center">{title}</span>
+    <span class="text-white font-semibold text-center">{category.name}</span>
   </div>
-</div>
+</a>

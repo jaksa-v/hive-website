@@ -1,15 +1,51 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { InferEntrySchema } from "astro:content";
 
 export default function Categories({
   categories,
   activities,
+  initialCategory,
+  initialSearch,
 }: {
   categories: InferEntrySchema<"categories">[];
   activities: InferEntrySchema<"activities">[];
+  initialCategory?: string;
+  initialSearch?: string;
 }) {
+  const [isReady, setIsReady] = useState(false);
+
+  const findCategoryNameBySlug = (slug: string) => {
+    const category = categories.find((cat) => cat.slug === slug);
+    return category?.name || "Sve";
+  };
+
   const [activeCategory, setActiveCategory] = useState<string>("Sve");
   const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    let categoryToUse = "Sve";
+
+    if (typeof document !== "undefined") {
+      const categorySlugFromBody =
+        document.body.getAttribute("data-category-slug");
+      if (categorySlugFromBody) {
+        const categoryName = findCategoryNameBySlug(categorySlugFromBody);
+        categoryToUse = categoryName;
+        document.body.removeAttribute("data-category-slug");
+      } else if (initialCategory) {
+        categoryToUse = findCategoryNameBySlug(initialCategory);
+      }
+    } else if (initialCategory) {
+      categoryToUse = findCategoryNameBySlug(initialCategory);
+    }
+
+    if (initialSearch) {
+      setSearchQuery(initialSearch);
+    }
+
+    setActiveCategory(categoryToUse);
+    setIsReady(true);
+  }, []);
 
   const categoriesWithCounts = categories.map((category) => ({
     id: category.id,
@@ -42,7 +78,46 @@ export default function Categories({
 
   const handleCategoryClick = (categoryName: string) => {
     setActiveCategory(categoryName);
+    updateUrlParams(categoryName, searchQuery);
   };
+
+  const updateUrlParams = (category: string, search: string) => {
+    const url = new URL(window.location.href);
+
+    if (category && category !== "Sve") {
+      // Find the slug for the selected category
+      const categoryObj = categories.find((cat) => cat.name === category);
+      if (categoryObj) {
+        url.searchParams.set("category", categoryObj.slug);
+      }
+    } else {
+      url.searchParams.delete("category");
+    }
+
+    if (search) {
+      url.searchParams.set("search", search);
+    } else {
+      url.searchParams.delete("search");
+    }
+
+    window.history.pushState({}, "", url);
+  };
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newSearchQuery = e.target.value;
+    setSearchQuery(newSearchQuery);
+    updateUrlParams(activeCategory, newSearchQuery);
+  };
+
+  if (!isReady) {
+    return (
+      <div className="min-h-[calc(100vh-56px)] max-w-screen-lg mx-auto px-[30px] mt-[56px] md:mt-[81px] md:px-0 flex flex-col pb-8 md:pb-12">
+        <div className="flex justify-center items-center h-[50vh]">
+          <div className="w-10 h-10 border-4 border-[#BF02C9] border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-[calc(100vh-56px)] max-w-screen-lg mx-auto px-[30px] mt-[56px] md:mt-[81px] md:px-0  flex flex-col pb-8 md:pb-12">
@@ -51,14 +126,14 @@ export default function Categories({
           Istražite aktivnosti
         </h1>
         <p className="text-white mt-[10px] text-base text-center md:text-lg lg:text-xl opacity-90">
-          Pogledajte 100+ team building aktivnosti.
+          Pogledajte dostupne ili preporučene tim bilding aktivnosti.
         </p>
         <div className="relative w-full max-w-[800px] mt-8">
           <input
             type="text"
             placeholder="Search your favourite NFTs"
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={handleSearchChange}
             className="w-full h-[56px] bg-[#1A1A1A] rounded-full px-6 pr-12 text-white text-base placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#BF02C9] transition-all"
           />
           <div className="absolute right-5 top-1/2 -translate-y-1/2">

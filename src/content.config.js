@@ -7,6 +7,9 @@ const categories = defineCollection({
   schema: z.object({
     id: z.number(),
     name: z.string(),
+    slug: z.string(),
+    color: z.string(),
+    image: z.string(),
   }),
 });
 

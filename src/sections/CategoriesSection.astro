@@ -1,42 +1,39 @@
 ---
 import CategoryCard from "../components/CategoryCard.astro";
+import { getCollection } from "astro:content";
 
-const items = [
-  { title: "Escape Room", color: "bg-[#ffc5c5]" },
-  { title: "Sportske igre", color: "bg-[#c5ffc5]" },
-  { title: "Kulturne igre", color: "bg-[#ffe6cc]" },
-  { title: "Radionice i edukacije", color: "bg-[#c5d9f1]" },
-  { title: "Virtuelne aktivnosti", color: "bg-[#ffc5e6]" },
-  { title: "Humanitarni projekti", color: "bg-[#d9f1ff]" },
-];
+const categories = await getCollection("categories");
 ---
 
 <section
   id="categories"
-  class="bg-[#212121] w-full h-[calc(100vh-56px)] px-[30px] md:px-0 flex flex-col justify-center"
+  class="bg-[#212121] w-full min-h-[calc(100vh-56px)] px-[30px] md:px-0 flex flex-col justify-center"
 >
   <div
-    class="max-w-screen-lg mx-auto flex flex-col gap-y-[30px] md:gap-y-[50px]"
+    class="max-w-screen-lg mx-auto py-8 flex flex-col gap-y-[30px] md:gap-y-[50px]"
   >
-    <div>
+    <div class="flex justify-between items-center">
       <h1
         class="text-white font-semibold text-[28px] md:text-[36px] lg:text-[48px] leading-[1.4]"
       >
         Izaberite Kategoriju Aktivnosti
       </h1>
+      <a href="/categories" class="text-white bg-[#BF02C9] hover:bg-[#a902b0] px-4 py-2 rounded-full font-medium transition-colors">
+        Pogledaj sve
+      </a>
     </div>
     <div class="grid grid-cols-2 md:hidden gap-5">
       {
-        items.map((item) => (
-          <CategoryCard title={item.title} bgColor={item.color} />
+        categories.map((item) => (
+          <CategoryCard category={item.data} />
         ))
       }
     </div>
     <div class="hidden md:flex flex-wrap justify-center gap-5">
       {
-        items.map((item) => (
+        categories.map((item) => (
           <div class="w-[calc(25%-16px)]">
-            <CategoryCard title={item.title} bgColor={item.color} />
+            <CategoryCard category={item.data} />
           </div>
         ))
       }

@@ -3,6 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import CategoriesComponent from "../components/Categories";
 import { getCollection } from "astro:content";
 
+const { searchParams } = Astro.url;
+const initialCategory = searchParams.get("category") || undefined;
+const initialSearch = searchParams.get("search") || undefined;
+
 const [categories, activities] = await Promise.all([
   getCollection("categories"),
   getCollection("activities"),
@@ -10,5 +14,27 @@ const [categories, activities] = await Promise.all([
 ---
 
 <Layout>
-  <CategoriesComponent client:load categories={categories.map(category => category.data)} activities={activities.map(activity => activity.data)} />
+  <CategoriesComponent
+    client:load
+    categories={categories.map((category) => category.data)}
+    activities={activities.map((activity) => activity.data)}
+    initialCategory={initialCategory}
+    initialSearch={initialSearch}
+  />
+
+  <script>
+    // Client-side script to ensure URL parameters are properly processed
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const categoryParam = urlParams.get("category");
+
+      // If we have a category parameter, we'll dispatch a custom event
+      // that the React component can listen for
+      if (categoryParam) {
+        console.log("Client-side detected category param:", categoryParam);
+        // Use a data attribute on the body element instead of window property
+        document.body.setAttribute("data-category-slug", categoryParam);
+      }
+    });
+  </script>
 </Layout>

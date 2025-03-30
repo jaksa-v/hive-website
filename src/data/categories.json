@@ -1,26 +1,44 @@
 [
   {
     "id": 1,
-    "name": "Sportske aktivnosti"
+    "name": "Sportske aktivnosti",
+    "slug": "sportske-aktivnosti",
+    "color": "#ffc5c5",
+    "image": "Organizacija sportskog turnira.jpg"
   },
   {
     "id": 2,
-    "name": "Zabavne igre"
+    "name": "Zabavne igre",
+    "slug": "zabavne-igre",
+    "color": "#c5ffc5",
+    "image": "escape room.png"
   },
   {
     "id": 3,
-    "name": "Kreativne aktivnosti"
+    "name": "Kreativne aktivnosti",
+    "slug": "kreativne-aktivnosti",
+    "color": "#ffe6cc",
+    "image": "slikanje.jpg"
   },
   {
     "id": 4,
-    "name": "Kulturne aktivnosti"
+    "name": "Kulturne aktivnosti",
+    "slug": "kulturne-aktivnosti",
+    "color": "#c5d9f1",
+    "image": "bioskop.jpg"
   },
   {
     "id": 5,
-    "name": "Edukativne aktivnosti"
+    "name": "Edukativne aktivnosti",
+    "slug": "edukativne-aktivnosti",
+    "color": "#ffc5e6",
+    "image": "Radionica korporativnih vrijednosti.jpg"
   },
   {
     "id": 6,
-    "name": "Avantura"
+    "name": "Avantura",
+    "slug": "avantura",
+    "color": "#d9f1ff",
+    "image": "avanturisticki park.jpg"
   }
 ]

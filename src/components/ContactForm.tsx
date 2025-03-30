@@ -83,9 +83,10 @@ export const ContactForm: React.FC = () => {
               />
 
               <FormInput
-                icon="https://cdn.builder.io/api/v1/image/assets/726deaa1fcc84d7f9722de30ef6f2b4e/2f1198c9512998f3d7532573b501fd1751f99e9485bae5ea245d679be650b4ee"
-                placeholder="Aktivnost"
-                name="activity"
+                icon="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNiZGJkYmQiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lc3NhZ2UtY2lyY2xlLWljb24gbHVjaWRlLW1lc3NhZ2UtY2lyY2xlIj48cGF0aCBkPSJNNy45IDIwQTkgOSAwIDEgMCA0IDE2LjFMMiAyMloiLz48L3N2Zz4="
+                placeholder="Poruka *"
+                name="message"
+                required
               />
             </div>
 
