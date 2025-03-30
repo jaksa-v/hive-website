@@ -131,7 +131,7 @@ export default function Categories({
         <div className="relative w-full max-w-[800px] mt-8">
           <input
             type="text"
-            placeholder="Search your favourite NFTs"
+            placeholder="Pretraži aktivnosti"
             value={searchQuery}
             onChange={handleSearchChange}
             className="w-full h-[56px] bg-[#1A1A1A] rounded-full px-6 pr-12 text-white text-base placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#BF02C9] transition-all"
