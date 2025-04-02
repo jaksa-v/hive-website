@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "City Rally",
+    "category": "2",
+    "number_of_participatns": "20+",
+    "duration": "4 sata",
+    "activities": ["28", "41", "42"],
+    "picture": "/programs/program1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Survival",
+    "category": "2",
+    "number_of_participatns": "20+",
+    "duration": "5 sati",
+    "activities": ["7", "37", "39"],
+    "picture": "/programs/program2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Priroda i društvo",
+    "category": "4",
+    "number_of_participatns": "20+",
+    "duration": "5-6 sati",
+    "activities": ["8", "24", "25"],
+    "picture": "/programs/program3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Kist",
+    "category": "4",
+    "number_of_participatns": "5-20",
+    "duration": "6 sati",
+    "activities": ["19", "23", "32"],
+    "picture": "/programs/program3.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Dambo",
+    "category": "5",
+    "number_of_participatns": "5-20",
+    "duration": "4 sata",
+    "activities": ["9", "10", "17"],
+    "picture": "/programs/program3.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Pelikan",
+    "category": "5",
+    "number_of_participatns": "10-40",
+    "duration": "4 sata",
+    "activities": ["18", "19"],
+    "picture": "/programs/program3.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Pizza Friday",
+    "category": "2",
+    "number_of_participatns": "10-30",
+    "duration": "4 sata",
+    "activities": ["30", "31", "36"],
+    "picture": "/programs/program3.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Kompas",
+    "category": "6",
+    "number_of_participatns": "10-20",
+    "duration": "2 dana (1 noc)",
+    "activities": ["46", "14", "22"],
+    "picture": "/programs/program3.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Potraga za blagom",
+    "category": "6",
+    "number_of_participatns": "10-20",
+    "duration": "3 dana (2 noci)",
+    "activities": ["42", "34"],
+    "picture": "/programs/program3.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Vodena Vila",
+    "category": "6",
+    "number_of_participatns": "10-20",
+    "duration": "12 sati",
+    "activities": ["15", "27"],
+    "picture": "/programs/program3.jpg"
+  }
+]

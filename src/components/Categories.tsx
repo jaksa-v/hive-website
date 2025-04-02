@@ -213,7 +213,7 @@ export default function Categories({
         {searchedItems.map((item, index) => (
           <div
             key={index}
-            className="bg-[#1A1A1A] rounded-lg overflow-hidden flex flex-col h-full transition-transform hover:scale-[1.02] hover:shadow-lg"
+            className="bg-[#1A1A1A] rounded-lg overflow-hidden flex flex-col h-full transition-all hover:scale-[1.02] hover:shadow-lg hover:ring-2 hover:ring-[#BF02C9]"
           >
             {item.picture && (
               <div className="relative w-full aspect-video overflow-hidden">
@@ -266,7 +266,7 @@ export default function Categories({
                   {item.audience}
                 </span>
                 <span className="text-xs bg-[#252525] text-gray-300 px-2 py-1 rounded">
-                  Do {item.number_of_participatns} učesnika
+                  {item.number_of_participatns} učesnika
                 </span>
               </div>
             </div>
