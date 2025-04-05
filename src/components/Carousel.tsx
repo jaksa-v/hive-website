@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProgramCard from "./ProgramCard";
+import ActivityCard from "./ActivityCard"; // Import ActivityCard
 
 interface Slide {
-  type: "program";
+  type: "program" | "activity";
   data: any;
 }
 
 interface CarouselProps {
   slides: Slide[];
+  type?: "activities" | "categories" | "default";
 }
 
-export default function Carousel({ slides }: CarouselProps) {
+export default function Carousel({ slides, type = "default" }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
   const itemCount = slides.length;
@@ -33,7 +35,11 @@ export default function Carousel({ slides }: CarouselProps) {
 
   return (
     <div className="relative w-full mx-auto">
-      <div className="overflow-hidden relative h-[450px] px-4 md:px-8">
+      <div
+        className={`overflow-hidden relative px-4 md:px-8 ${
+          type === "activities" ? "h-[350px]" : "h-[450px]"
+        }`}
+      >
         <AnimatePresence initial={false}>
           <motion.div
             key={currentIndex}
@@ -57,7 +63,13 @@ export default function Carousel({ slides }: CarouselProps) {
                   >
                     <div>
                       {slides[index].type === "program" && (
-                        <ProgramCard item={slides[index].data} />
+                        <ProgramCard
+                          item={slides[index].data}
+                          key={slides[index].data.id}
+                        />
+                      )}
+                      {slides[index].type === "activity" && (
+                        <ActivityCard item={slides[index].data} />
                       )}
                     </div>
                   </div>
@@ -67,7 +79,15 @@ export default function Carousel({ slides }: CarouselProps) {
             <div className="md:hidden w-full">
               {slides[currentIndex].type === "program" && (
                 <div className="px-4">
-                  <ProgramCard item={slides[currentIndex].data} />
+                  <ProgramCard
+                    item={slides[currentIndex].data}
+                    key={slides[currentIndex].data.id}
+                  />
+                </div>
+              )}
+              {slides[currentIndex].type === "activity" && (
+                <div className="px-4">
+                  <ActivityCard item={slides[currentIndex].data} />
                 </div>
               )}
             </div>

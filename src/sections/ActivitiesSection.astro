@@ -1,0 +1,41 @@
+---
+import Carousel from "../components/Carousel";
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+// Function to shuffle array and get N random items
+function getRandomItems(array: CollectionEntry<'activities'>[], n: number): CollectionEntry<'activities'>[] {
+  const shuffled = array.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, n);
+}
+
+const allActivities = await getCollection('activities');
+const randomActivities = getRandomItems(allActivities, 9);
+---
+
+<section
+  id="activities"
+  class="min-h-[calc(100vh-56px)] w-full relative px-[30px] md:px-[0px] flex flex-col justify-center py-12 overflow-hidden"
+>
+  <div class="absolute inset-0 bg-gradient-to-b from-[#252525] to-[#1a1a1a] opacity-20 z-0"></div>
+  <div class="max-w-screen-lg mx-auto relative z-10 w-full">
+  <div class="flex flex-col gap-y-[30px]">
+    <div>
+      <h1
+        class="text-white font-semibold text-[28px] md:text-[36px] lg:text-[48px] leading-[1.4]"
+      >
+        Istražite Naše Aktivnosti
+      </h1>
+      <p class="text-white mt-[10px]">
+        Otkrijte raznovrsne tim bilding aktivnosti koje nudimo.
+      </p>
+    </div>
+    <div id="carousel-wrapper">
+      <Carousel
+        client:only="react"
+        type="activities"
+        slides={randomActivities.map((entry: CollectionEntry<'activities'>) => ({ type: "activity", data: entry.data }))}
+      />
+    </div>
+  </div>
+  </div>
+</section>

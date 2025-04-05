@@ -5,32 +5,38 @@ import hiveLogo from "../assets/hive-logo.png";
 
 <section
   id="hero"
-  class="min-h-screen max-w-screen-lg mx-auto px-[30px] md:px-0 flex flex-col justify-center"
+  class="min-h-screen w-full relative px-[30px] md:px-0 flex flex-col justify-center overflow-hidden"
 >
-  <div class="flex flex-col gap-y-[30px] md:max-w-[80%] lg:max-w-[60%]">
-    <Image
-      src={hiveLogo}
-      alt="Hive logo"
-      class="w-[250px] md:w-[300px] lg:w-[400px]"
-    />
-    <div>
-      <h1
-        class="text-white font-semibold text-[28px] md:text-[36px] lg:text-[48px] leading-[1.4]"
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-[#1a1a1a] to-[#121212] opacity-20 z-0"
+  >
+  </div>
+  <div class="max-w-screen-lg mx-auto relative z-10 w-full">
+    <div class="flex flex-col gap-y-[30px] md:max-w-[80%] lg:max-w-[60%]">
+      <Image
+        src={hiveLogo}
+        alt="Hive logo"
+        class="w-[250px] md:w-[300px] lg:w-[400px]"
+      />
+      <div>
+        <h1
+          class="text-white font-semibold text-[28px] md:text-[36px] lg:text-[48px] leading-[1.4]"
+        >
+          Otkrijte Najbolje Tim Bilding Aktivnosti
+        </h1>
+        <p
+          class="text-white mt-[10px] text-base md:text-lg lg:text-xl opacity-90"
+        >
+          Vaš partner za nezaboravna iskustva! Pomažemo vam da kreirate savršene
+          timske aktivnosti koje povezuju vaš tim i jačaju saradnju.
+        </p>
+      </div>
+      <a
+        href="/categories"
+        class="bg-[#BF02C9] hover:bg-[#a102ac] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-[20px] w-full md:max-w-[200px] md:w-full md:px-12 py-5 inline-block text-center"
       >
-        Otkrijte Najbolje Tim Bilding Aktivnosti
-      </h1>
-      <p
-        class="text-white mt-[10px] text-base md:text-lg lg:text-xl opacity-90"
-      >
-        Vaš partner za nezaboravna iskustva! Pomažemo vam da kreirate savršene
-        timske aktivnosti koje povezuju vaš tim i jačaju saradnju.
-      </p>
+        <span class="text-white font-semibold">Projekti</span>
+      </a>
     </div>
-    <a
-      href="/categories"
-      class="bg-[#BF02C9] hover:bg-[#a102ac] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-[20px] w-full md:max-w-[200px] md:w-full md:px-12 py-5 inline-block text-center"
-    >
-      <span class="text-white font-semibold">Projekti</span>
-    </a>
   </div>
 </section>
