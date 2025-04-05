@@ -82,12 +82,22 @@ export const ContactForm: React.FC = () => {
                 required
               />
 
-              <FormInput
-                icon="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNiZGJkYmQiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lc3NhZ2UtY2lyY2xlLWljb24gbHVjaWRlLW1lc3NhZ2UtY2lyY2xlIj48cGF0aCBkPSJNNy45IDIwQTkgOSAwIDEgMCA0IDE2LjFMMiAyMloiLz48L3N2Zz4="
-                placeholder="Poruka *"
-                name="message"
-                required
-              />
+              <div className="relative flex items-center">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Poruka *"
+                  required
+                  rows={4}
+                  className="flex-1 p-4 pl-12 text-neutral-900 bg-neutral-50 rounded-3xl w-full focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
+                ></textarea>
+                <img
+                  loading="lazy"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNiZGJkYmQiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lc3NhZ2UtY2lyY2xlLWljb24gbHVjaWRlLW1lc3NhZ2UtY2lyY2xlIj48cGF0aCBkPSJNNy45IDIwQTkgOSAwIDEgMCA0IDE2LjFMMiAyMloiLz48L3N2Zz4="
+                  className="absolute left-4 top-4 w-6 h-6 pointer-events-none"
+                  alt="Message icon"
+                />
+              </div>
             </div>
 
             <div className="mt-8">
