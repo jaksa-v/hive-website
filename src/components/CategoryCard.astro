@@ -7,22 +7,43 @@ const { category } = Astro.props;
 const imagePath = `/activities/${category.image}`;
 ---
 
-<a href={`/categories?category=${category.slug}`} class="w-full h-[300px] rounded-[18px] flex flex-col hover:scale-105 transition-all duration-300 cursor-pointer">
+<a
+  href={`/categories?category=${category.slug}`}
+  class="w-full h-[300px] rounded-[18px] flex flex-col hover:scale-105 transition-all duration-300 cursor-pointer"
+>
   <div
-    style={{backgroundColor: category.color}}
+    style={{ backgroundColor: category.color }}
     class="flex-1 flex justify-center items-center rounded-t-[18px] relative overflow-hidden"
   >
     <!-- Background blurred image -->
     <div class="absolute inset-0 z-0">
-      <img 
-        src={imagePath} 
-        alt="" 
+      <img
+        src={imagePath}
+        alt=""
         class="w-full h-full object-cover opacity-40 filter blur-sm"
       />
     </div>
     <!-- Icon on top -->
     <div class="z-10 relative">
-      <Image src={placeholderIcon} alt="" width={80} height={80} />
+      {
+        category.icon ? (
+          <img
+            src={category.icon}
+            alt=""
+            width="60"
+            height="60"
+            class="filter text-white invert brightness-0 opacity-90"
+          />
+        ) : (
+          <Image
+            src={placeholderIcon}
+            alt=""
+            width={60}
+            height={60}
+            class="filter brightness-0 opacity-90"
+          />
+        )
+      }
     </div>
   </div>
   <div

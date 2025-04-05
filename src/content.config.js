@@ -10,6 +10,7 @@ const categories = defineCollection({
     slug: z.string(),
     color: z.string(),
     image: z.string(),
+    icon: z.string().optional(),
   }),
 });
 
