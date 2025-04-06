@@ -1,8 +1,37 @@
 ---
 import Carousel from "../components/Carousel";
 import { getCollection, type CollectionEntry } from 'astro:content';
+import programsData from '../data/programs.json';
+import activitiesData from '../data/activities.json';
 
 const allPrograms = await getCollection('programs');
+
+// Function to find an activity by ID
+const findActivityById = (id: string): typeof activitiesData[0] | undefined => {
+  return activitiesData.find(activity => activity.id.toString() === id);
+};
+
+// Process programs data to include corresponding activities
+const programsWithActivities = programsData.map(program => {
+  const activities = program.activities
+    .slice(0, 3) // Limit to three activities per program
+    .map(activityId => findActivityById(activityId))
+    .filter(activity => activity); // Filter out any undefined activities
+  
+  return {
+    ...program,
+    activityDetails: activities
+  };
+});
+
+// Function to shuffle array and get N random items
+function getRandomItems(array: any[], n: number): any[] {
+  const shuffled = [...array].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, n);
+}
+
+// Get 6 random programs
+const randomPrograms = getRandomItems(programsWithActivities, 6);
 ---
 
 <section
@@ -26,7 +55,21 @@ const allPrograms = await getCollection('programs');
       <Carousel
         client:only="react"
         type="default"
-        slides={allPrograms.map((entry: CollectionEntry<'programs'>) => ({ type: "program", data: entry.data }))}
+        slides={randomPrograms.map((program) => ({ 
+          type: "program", 
+          data: {
+            id: program.id,
+            title: program.name,  // ProgramCard expects 'title' instead of 'name'
+            participants: program.number_of_participatns, // ProgramCard expects 'participants'
+            duration: program.duration,
+            picture: program.picture, // Include the picture property
+            // Include activities data for display in the carousel
+            activities: program.activityDetails.map((activity: typeof activitiesData[0]) => ({
+              title: activity?.title || 'Aktivnost nije pronađena',
+              picture: activity?.picture || '' // Include activity picture property
+            }))
+          } 
+        }))}
       />
     </div>
   </div>

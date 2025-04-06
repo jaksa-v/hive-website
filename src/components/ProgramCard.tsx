@@ -2,6 +2,7 @@ import cardImage from "../assets/program-card-image.png";
 
 interface Activity {
   title: string;
+  picture?: string;
 }
 
 interface ProgramCardProps {
@@ -9,12 +10,14 @@ interface ProgramCardProps {
     title: string;
     participants: string;
     duration: string;
+    picture?: string;
     activities: Activity[];
   };
 }
 
 export default function ProgramCard({ item }: ProgramCardProps) {
-  const { title, participants, duration, activities } = item;
+  const { title, participants, duration, activities, picture } = item;
+  const imageUrl = picture ? picture : cardImage.src;
 
   return (
     <div className="bg-[#1E1E1E] rounded-[18px] flex flex-col p-4 border border-1 border-[#02C9BF] cursor-pointer transition-all duration-300 hover:shadow-[inset_0_0_15px_rgba(2,201,191,0.3)]">
@@ -22,8 +25,14 @@ export default function ProgramCard({ item }: ProgramCardProps) {
         <div className="rounded-[18px] flex flex-col relative h-[306px]">
           <img
             className="absolute inset-0 w-full h-full object-cover rounded-[18px]"
-            src={cardImage.src}
+            src={imageUrl}
             alt={title}
+            onError={(e) => {
+              // Fallback if image fails to load
+              const target = e.target as HTMLImageElement;
+              target.onerror = null;
+              target.src = cardImage.src;
+            }}
           />
           <div className="z-10 absolute w-full bottom-0 bg-[#3B3B3B] rounded-b-[18px] pt-2 pb-3 px-3">
             <span className="text-white font-semibold">{title}</span>
@@ -46,12 +55,20 @@ export default function ProgramCard({ item }: ProgramCardProps) {
             >
               <img
                 className="absolute inset-0 w-full h-full object-cover rounded-[14px]"
-                src={cardImage.src}
+                src={activity.picture || cardImage.src}
                 alt={activity.title}
+                onError={(e) => {
+                  // Fallback if image fails to load
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null;
+                  target.src = cardImage.src;
+                }}
               />
               <div className="z-10 absolute w-full bottom-0 bg-[#3B3B3B] rounded-b-[14px] px-2 py-1 flex justify-center">
-                <span className="text-xs font-medium text-white">
-                  {activity.title}
+                <span className="text-xs font-medium text-white h-[32px] flex items-center overflow-hidden">
+                  <span className="line-clamp-2 text-center">
+                    {activity.title}
+                  </span>
                 </span>
               </div>
             </div>

@@ -6,7 +6,7 @@
     "number_of_participatns": "20+",
     "duration": "4 sata",
     "activities": ["28", "41", "42"],
-    "picture": "/programs/program1.jpg"
+    "picture": "/activities/Pub Crawling.jpg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "number_of_participatns": "20+",
     "duration": "5 sati",
     "activities": ["7", "37", "39"],
-    "picture": "/programs/program2.jpg"
+    "picture": "/activities/survival.jpg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "number_of_participatns": "20+",
     "duration": "5-6 sati",
     "activities": ["8", "24", "25"],
-    "picture": "/programs/program3.jpg"
+    "picture": "/activities/planinarenje.jpg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "number_of_participatns": "5-20",
     "duration": "6 sati",
     "activities": ["19", "23", "32"],
-    "picture": "/programs/program3.jpg"
+    "picture": "/activities/slikanje.jpg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "number_of_participatns": "5-20",
     "duration": "4 sata",
     "activities": ["9", "10", "17"],
-    "picture": "/programs/program3.jpg"
+    "picture": "/activities/druzenje sa psima.jpg"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "number_of_participatns": "10-40",
     "duration": "4 sata",
     "activities": ["18", "19"],
-    "picture": "/programs/program3.jpg"
+    "picture": "/activities/krstarenje.jpg"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "number_of_participatns": "10-30",
     "duration": "4 sata",
     "activities": ["30", "31", "36"],
-    "picture": "/programs/program3.jpg"
+    "picture": "/activities/Simulacija kriznog menadzmenta.jpeg"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "number_of_participatns": "10-20",
     "duration": "2 dana (1 noc)",
     "activities": ["46", "14", "22"],
-    "picture": "/programs/program3.jpg"
+    "picture": "/activities/kampovanje.jpg"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "number_of_participatns": "10-20",
     "duration": "3 dana (2 noci)",
     "activities": ["42", "34"],
-    "picture": "/programs/program3.jpg"
+    "picture": "/activities/treasure hunt.jpg"
   },
   {
     "id": 10,
@@ -87,6 +87,6 @@
     "number_of_participatns": "10-20",
     "duration": "12 sati",
     "activities": ["15", "27"],
-    "picture": "/programs/program3.jpg"
+    "picture": "/activities/kanjoning.jpg"
   }
 ]

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProgramCard from "./ProgramCard";
 import ActivityCard from "./ActivityCard"; // Import ActivityCard
@@ -16,21 +16,51 @@ interface CarouselProps {
 export default function Carousel({ slides, type = "default" }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
+  const [isMobile, setIsMobile] = useState(false);
   const itemCount = slides.length;
+  const itemsPerSlide = isMobile ? 1 : 3;
+  const totalGroups = Math.ceil(itemCount / itemsPerSlide);
+  
+  // Add event listener to detect screen size changes
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Check initially
+    checkMobile();
+    
+    // Add resize listener
+    window.addEventListener('resize', checkMobile);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const goToPrevious = () => {
     setDirection(-1);
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + itemCount) % itemCount);
+    setCurrentIndex((prevIndex) => {
+      // Move backward by one group (3 items)
+      const newIndex = prevIndex - itemsPerSlide;
+      // If we go before the first item, loop to the last group
+      return newIndex < 0 ? Math.floor((itemCount - 1) / itemsPerSlide) * itemsPerSlide : newIndex;
+    });
   };
 
   const goToNext = () => {
     setDirection(1);
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % itemCount);
+    setCurrentIndex((prevIndex) => {
+      // Move forward by one group (3 items)
+      const newIndex = prevIndex + itemsPerSlide;
+      // If we go past the last item, loop to the first group
+      return newIndex >= itemCount ? 0 : newIndex;
+    });
   };
 
-  const goToSlide = (index: number) => {
-    setDirection(index > currentIndex ? 1 : -1);
-    setCurrentIndex(index);
+  const goToSlide = (groupIndex: number) => {
+    const targetIndex = groupIndex * itemsPerSlide;
+    setDirection(targetIndex > currentIndex ? 1 : -1);
+    setCurrentIndex(targetIndex);
   };
 
   return (
@@ -55,8 +85,9 @@ export default function Carousel({ slides, type = "default" }: CarouselProps) {
           >
             <div className="hidden md:flex w-full">
               {[0, 1, 2].map((offset) => {
-                const index = (currentIndex + offset) % itemCount;
-                return (
+                const index = currentIndex + offset;
+                // Only render if the index is valid
+                return index < itemCount ? (
                   <div
                     key={index}
                     className="w-[calc(33.333%-1rem)] shrink-0 first:ml-0 ml-4"
@@ -73,11 +104,11 @@ export default function Carousel({ slides, type = "default" }: CarouselProps) {
                       )}
                     </div>
                   </div>
-                );
+                ) : null;
               })}
             </div>
             <div className="md:hidden w-full">
-              {slides[currentIndex].type === "program" && (
+              {itemCount > 0 && currentIndex < itemCount && slides[currentIndex].type === "program" && (
                 <div className="px-4">
                   <ProgramCard
                     item={slides[currentIndex].data}
@@ -85,7 +116,7 @@ export default function Carousel({ slides, type = "default" }: CarouselProps) {
                   />
                 </div>
               )}
-              {slides[currentIndex].type === "activity" && (
+              {itemCount > 0 && currentIndex < itemCount && slides[currentIndex].type === "activity" && (
                 <div className="px-4">
                   <ActivityCard item={slides[currentIndex].data} />
                 </div>
@@ -118,18 +149,39 @@ export default function Carousel({ slides, type = "default" }: CarouselProps) {
         </button>
 
         <div className="flex gap-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`h-2 w-2 rounded-full transition-colors ${
-                index === currentIndex
-                  ? "bg-white"
-                  : "bg-white/50 hover:bg-white/80"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+          {isMobile ? (
+            // On mobile, show dot for each item
+            slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`h-2 w-2 rounded-full transition-colors ${
+                  index === currentIndex
+                    ? "bg-white"
+                    : "bg-white/50 hover:bg-white/80"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))
+          ) : (
+            // On desktop, show dot for each group of three
+            Array.from({ length: totalGroups }).map((_, groupIndex) => {
+              const startIndex = groupIndex * itemsPerSlide;
+              const isActive = currentIndex >= startIndex && currentIndex < startIndex + itemsPerSlide;
+              return (
+                <button
+                  key={groupIndex}
+                  onClick={() => goToSlide(groupIndex)}
+                  className={`h-2 w-2 rounded-full transition-colors ${
+                    isActive
+                      ? "bg-white"
+                      : "bg-white/50 hover:bg-white/80"
+                  }`}
+                  aria-label={`Go to group ${groupIndex + 1}`}
+                />
+              );
+            })
+          )}
         </div>
 
         <button
