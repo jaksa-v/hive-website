@@ -35,7 +35,11 @@ export default function ProgramCard({ item }: ProgramCardProps) {
             }}
           />
           <div className="z-10 absolute w-full bottom-0 bg-[#3B3B3B] rounded-b-[18px] pt-2 pb-3 px-3">
-            <span className="text-white font-semibold">{title}</span>
+            <div className="h-[48px] flex items-center">
+              <span className="text-white font-semibold line-clamp-2 text-lg md:text-xl lg:text-2xl">
+                {title}
+              </span>
+            </div>
             <div className="flex gap-x-2 mt-2 font-mono">
               <span className="text-xs text-[#858584]">
                 Broj učesnika:{" "}

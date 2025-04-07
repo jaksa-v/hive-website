@@ -1,5 +1,5 @@
 ---
-import hiveLogo from "../assets/hive-logo-nav.png";
+import hiveLogo from "../assets/hive-logo-alternative.png";
 
 const navigationItems = [
   { label: "Naslovna", url: "/" },
@@ -12,11 +12,11 @@ const currentPath = Astro.url.pathname;
 ---
 
 <nav
-  class="fixed border-0.5 border-b border-gray-500 top-0 left-0 right-0 z-50 bg-[#2B2B2B] w-full hidden md:block px-[50px] py-4"
+  class="fixed border-0.5 border-b border-gray-500 top-0 left-0 right-0 z-50 bg-[#2B2B2B] w-full hidden md:block px-[50px]"
 >
   <div class="flex justify-between items-center max-w-screen-lg mx-auto">
     <a href="/">
-      <img class="h-10 w-10" src={hiveLogo.src} alt="Hive logo" />
+      <img class="h-20 w-20" src={hiveLogo.src} alt="Hive logo" />
     </a>
     <ul class="flex gap-x-4 items-center">
       {
