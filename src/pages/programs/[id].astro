@@ -1,0 +1,191 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const programs = await import("../../data/programs.json");
+  return programs.default.map((program) => ({
+    params: { id: program.id.toString() },
+    props: { program },
+  }));
+}
+
+const { program } = Astro.props;
+
+// Get category data
+const allCategories = await getCollection("categories");
+const category = allCategories.find(
+  (cat) => cat.id.toString() === program.category.toString()
+)?.data;
+
+// Get activities data
+const allActivities = await getCollection("activities");
+const programActivities = allActivities
+  .filter((activity) =>
+    program.activities.includes(activity.data.id.toString())
+  )
+  .map((activity) => activity.data);
+
+// Format image path if it starts with a relative path
+const imagePath =
+  program.picture && program.picture.startsWith("/")
+    ? import.meta.env.BASE_URL + program.picture.substring(1)
+    : program.picture || "";
+---
+
+<Layout title={`${program.name} | Hive`}>
+  <div class="flex flex-col mt-[72px] md:mt-[81px] pb-10">
+    <!-- Mobile hero image (visible only on mobile) -->
+    <div class="relative h-[250px] w-full md:hidden">
+      <img
+        src={imagePath}
+        alt={program.name}
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-[#1E1E1E]/80 to-transparent"
+      >
+      </div>
+    </div>
+
+    <!-- Main container -->
+    <div
+      class="flex flex-col gap-y-8 py-10 px-[30px] md:px-0 max-w-screen-lg mx-auto"
+    >
+      <!-- Two-column flex layout -->
+      <div class="md:flex md:flex-row md:gap-x-24">
+        <!-- LEFT COLUMN: Text Content -->
+        <div class="flex flex-col md:space-y-4 order-2 md:order-1 md:flex-1">
+          <!-- Title and Category -->
+          <div>
+            <h1
+              class="text-white font-semibold text-[28px] md:text-[36px] lg:text-[48px] leading-[1.4] mb-4"
+            >
+              {program.name}
+            </h1>
+            {
+              category && (
+                <span
+                  class="inline-block px-3 py-1 rounded-full text-sm font-medium"
+                  style={`background-color: ${category.color}33; color: ${category.color}`}
+                >
+                  {category.name}
+                </span>
+              )
+            }
+          </div>
+
+          <!-- Metadata Icons -->
+          <div class="flex flex-wrap gap-x-4 py-2">
+            <div class="flex items-center px-2 py-2 bg-[#2A2A2A] rounded-lg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-white mr-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span class="text-white">{program.duration}</span>
+            </div>
+
+            <div class="flex items-center px-2 py-2 bg-[#2A2A2A] rounded-lg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-white mr-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+              <span class="text-white">{program.number_of_participatns}</span>
+            </div>
+          </div>
+
+          <!-- Activities List -->
+          <div>
+            <p
+              class="font-mono text-gray-300 text-[20px] md:text-[24px] leading-[1.4] mb-3"
+            >
+              Aktivnosti u programu
+            </p>
+            <div class="grid gap-4">
+              {
+                programActivities.map((activity) => (
+                  <a
+                    href={`/activities/${activity.id}`}
+                    class="block p-4 bg-[#2A2A2A] rounded-[20px] border border-[#02C9BF] hover:bg-[#3A3A3A] transition-colors"
+                  >
+                    <h3 class="text-white font-medium text-lg mb-2">
+                      {activity.title}
+                    </h3>
+                    <p class="text-white text-sm line-clamp-2">
+                      {activity.description}
+                    </p>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div
+            class="flex flex-col sm:flex-row justify-between gap-6 items-start sm:items-center"
+          >
+            <a
+              href="/programs"
+              class="inline-flex items-center text-[#02C9BF] hover:text-[#00A89F] transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-white mr-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+              </svg>
+              <span class="text-white">Nazad na sve programe</span>
+            </a>
+
+            <a
+              href="/contact"
+              class="px-8 py-3 bg-[#BF02C9] text-white font-semibold rounded-[20px] transition-transform duration-200 hover:scale-105"
+            >
+              Kontaktirajte nas
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Image -->
+        <div class="order-1 md:order-2 md:flex-1 flex items-center">
+          <div
+            class="h-[450px] w-full rounded-2xl overflow-hidden hidden md:block sticky top-[100px]"
+          >
+            <img
+              src={imagePath}
+              alt={program.name}
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

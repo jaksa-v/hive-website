@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import ProgramCard from "../../components/ProgramCard";
+
+// Get all programs
+const programs = await import("../../data/programs.json");
+
+// Get all activities to map to programs
+const allActivities = await getCollection("activities");
+
+interface Activity {
+  title: string;
+  picture?: string;
+}
+
+// Map programs to include activity details
+const programsWithActivities = programs.default.map((program) => {
+  const activities = program.activities
+    .map((activityId) => {
+      const activity = allActivities.find(
+        (a) => a.data.id.toString() === activityId
+      )?.data;
+      if (!activity) return null;
+      return {
+        title: activity.title,
+        picture: activity.picture,
+      } as Activity;
+    })
+    .filter((a): a is Activity => a !== null); // Type-safe filter
+
+  return {
+    title: program.name,
+    participants: program.number_of_participatns,
+    duration: program.duration,
+    picture: program.picture,
+    activities: activities,
+    id: program.id,
+  };
+});
+---
+
+<Layout title="Programi | Hive">
+  <div class="flex flex-col mt-[72px] md:mt-[81px] pb-10">
+    <div class="max-w-screen-lg mx-auto px-[30px] md:px-0 w-full">
+      <!-- Header -->
+      <div class="mb-8">
+        <h1
+          class="text-white font-semibold text-3xl md:text-4xl lg:text-5xl py-4 md:py-12"
+        >
+          Programi
+        </h1>
+      </div>
+
+      <!-- Programs Grid -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2 md:mt-4"
+      >
+        {
+          programsWithActivities.map((program) => (
+            <ProgramCard
+              client:load
+              item={{
+                title: program.title,
+                participants: program.participants,
+                duration: program.duration,
+                picture: program.picture,
+                activities: program.activities,
+                id: program.id,
+              }}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
