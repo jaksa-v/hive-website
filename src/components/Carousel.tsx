@@ -20,21 +20,21 @@ export default function Carousel({ slides, type = "default" }: CarouselProps) {
   const itemCount = slides.length;
   const itemsPerSlide = isMobile ? 1 : 3;
   const totalGroups = Math.ceil(itemCount / itemsPerSlide);
-  
+
   // Add event listener to detect screen size changes
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     // Check initially
     checkMobile();
-    
+
     // Add resize listener
-    window.addEventListener('resize', checkMobile);
-    
+    window.addEventListener("resize", checkMobile);
+
     // Clean up
-    return () => window.removeEventListener('resize', checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const goToPrevious = () => {
@@ -43,7 +43,9 @@ export default function Carousel({ slides, type = "default" }: CarouselProps) {
       // Move backward by one group (3 items)
       const newIndex = prevIndex - itemsPerSlide;
       // If we go before the first item, loop to the last group
-      return newIndex < 0 ? Math.floor((itemCount - 1) / itemsPerSlide) * itemsPerSlide : newIndex;
+      return newIndex < 0
+        ? Math.floor((itemCount - 1) / itemsPerSlide) * itemsPerSlide
+        : newIndex;
     });
   };
 
@@ -108,19 +110,23 @@ export default function Carousel({ slides, type = "default" }: CarouselProps) {
               })}
             </div>
             <div className="md:hidden w-full">
-              {itemCount > 0 && currentIndex < itemCount && slides[currentIndex].type === "program" && (
-                <div className="px-4">
-                  <ProgramCard
-                    item={slides[currentIndex].data}
-                    key={slides[currentIndex].data.id}
-                  />
-                </div>
-              )}
-              {itemCount > 0 && currentIndex < itemCount && slides[currentIndex].type === "activity" && (
-                <div className="px-4">
-                  <ActivityCard item={slides[currentIndex].data} />
-                </div>
-              )}
+              {itemCount > 0 &&
+                currentIndex < itemCount &&
+                slides[currentIndex].type === "program" && (
+                  <div className="">
+                    <ProgramCard
+                      item={slides[currentIndex].data}
+                      key={slides[currentIndex].data.id}
+                    />
+                  </div>
+                )}
+              {itemCount > 0 &&
+                currentIndex < itemCount &&
+                slides[currentIndex].type === "activity" && (
+                  <div className="">
+                    <ActivityCard item={slides[currentIndex].data} />
+                  </div>
+                )}
             </div>
           </motion.div>
         </AnimatePresence>
@@ -149,39 +155,37 @@ export default function Carousel({ slides, type = "default" }: CarouselProps) {
         </button>
 
         <div className="flex gap-2">
-          {isMobile ? (
-            // On mobile, show dot for each item
-            slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`h-2 w-2 rounded-full transition-colors ${
-                  index === currentIndex
-                    ? "bg-white"
-                    : "bg-white/50 hover:bg-white/80"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))
-          ) : (
-            // On desktop, show dot for each group of three
-            Array.from({ length: totalGroups }).map((_, groupIndex) => {
-              const startIndex = groupIndex * itemsPerSlide;
-              const isActive = currentIndex >= startIndex && currentIndex < startIndex + itemsPerSlide;
-              return (
+          {isMobile
+            ? // On mobile, show dot for each item
+              slides.map((_, index) => (
                 <button
-                  key={groupIndex}
-                  onClick={() => goToSlide(groupIndex)}
+                  key={index}
+                  onClick={() => goToSlide(index)}
                   className={`h-2 w-2 rounded-full transition-colors ${
-                    isActive
+                    index === currentIndex
                       ? "bg-white"
                       : "bg-white/50 hover:bg-white/80"
                   }`}
-                  aria-label={`Go to group ${groupIndex + 1}`}
+                  aria-label={`Go to slide ${index + 1}`}
                 />
-              );
-            })
-          )}
+              ))
+            : // On desktop, show dot for each group of three
+              Array.from({ length: totalGroups }).map((_, groupIndex) => {
+                const startIndex = groupIndex * itemsPerSlide;
+                const isActive =
+                  currentIndex >= startIndex &&
+                  currentIndex < startIndex + itemsPerSlide;
+                return (
+                  <button
+                    key={groupIndex}
+                    onClick={() => goToSlide(groupIndex)}
+                    className={`h-2 w-2 rounded-full transition-colors ${
+                      isActive ? "bg-white" : "bg-white/50 hover:bg-white/80"
+                    }`}
+                    aria-label={`Go to group ${groupIndex + 1}`}
+                  />
+                );
+              })}
         </div>
 
         <button

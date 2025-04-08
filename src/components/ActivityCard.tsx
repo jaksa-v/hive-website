@@ -22,7 +22,7 @@ export default function ActivityCard({ item }: ActivityCardProps) {
   const imageUrl = picture ? picture : defaultCardImage.src;
 
   return (
-    <div className="bg-[#1E1E1E] rounded-[18px] flex flex-col p-4 border border-1 border-[#FFA500] cursor-pointer transition-all duration-300 hover:shadow-[inset_0_0_15px_rgba(255,165,0,0.3)]">
+    <div className="bg-[#1E1E1E] rounded-[18px] flex flex-col p-4 border border-1 border-[#02C9BF] cursor-pointer transition-all duration-300 hover:shadow-[inset_0_0_15px_rgba(2,201,191,0.3)]">
       {/* Link placeholder - adjust href as needed */}
       <a href={`/activities/${item.id}`}>
         <div className="rounded-[18px] flex flex-col relative h-[306px]">

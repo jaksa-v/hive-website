@@ -99,17 +99,6 @@
     "picture": "/activities/eko radionice.jpg"
   },
   {
-    "id": 11,
-    "title": "Escape prirodni labirint",
-    "category": "2",
-    "outdoor": true,
-    "description": "Izazovite svoje snalažljive sposobnosti u prirodi kroz jedinstveni escape izazov! Učesnici će se kretati kroz kompleksan prirodni labirint, tražeći tragove i rješenja koja vode ka izlazu. Timovi moraju da sarađuju, koriste mapu i logiku kako bi što brže našli put do slobode. Ova avantura testira sposobnost donošenja odluka pod pritiskom, komunikaciju i timsku koordinaciju, sve dok uživate u prirodnom okruženju.",
-    "duration": "2-3h",
-    "audience": "Public",
-    "number_of_participatns": "15-40",
-    "picture": "/activities/mission impssible.jpg"
-  },
-  {
     "id": 12,
     "title": "Escape room izazov",
     "category": "2",
@@ -470,7 +459,7 @@
     "duration": "1-2h",
     "audience": "Firma",
     "number_of_participatns": "10-30",
-    "picture": "/activities/izgradnja splava.jpg"
+    "picture": "/activities/Vjezba izgradnje tornja.png"
   },
   {
     "id": 46,

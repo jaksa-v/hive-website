@@ -1,5 +1,5 @@
 import { useState } from "react";
-import hiveLogo from "../assets/hive-logo-nav.png";
+import hiveLogo from "../assets/hive-logo-alternative.png";
 import menuIcon from "../assets/menu-icon.png";
 
 export default function MobileNavigation() {
@@ -18,7 +18,7 @@ export default function MobileNavigation() {
     <>
       <div className="flex md:hidden justify-between items-center fixed top-0 left-0 right-0 z-50 text-white py-2 px-4 bg-[#2B2B2B]/80 backdrop-blur-sm">
         <a href="/">
-          <img className="h-10 w-10" src={hiveLogo.src} alt="Hive logo" />
+          <img className="h-20 w-20 -my-3" src={hiveLogo.src} alt="Hive logo" />
         </a>
         <button
           onClick={toggleMenu}
