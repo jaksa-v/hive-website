@@ -211,9 +211,10 @@ export default function Categories({
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {searchedItems.map((item, index) => (
-          <div
+          <a
+            href={`/activities/${item.id}`}
             key={index}
-            className="bg-[#1A1A1A] rounded-lg overflow-hidden flex flex-col h-full transition-all hover:scale-[1.02] hover:shadow-lg hover:ring-2 hover:ring-[#BF02C9]"
+            className="bg-[#1A1A1A] rounded-lg overflow-hidden flex flex-col h-full transition-all hover:scale-[1.02] hover:shadow-lg hover:ring-2 hover:ring-[#BF02C9] no-underline"
           >
             {item.picture && (
               <div className="relative w-full aspect-video overflow-hidden">
@@ -270,7 +271,7 @@ export default function Categories({
                 </span>
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>
