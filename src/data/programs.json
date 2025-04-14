@@ -50,8 +50,8 @@
     "category": "5",
     "number_of_participatns": "10-40",
     "duration": "4h",
-    "activities": ["18", "19"],
-    "picture": "/activities/krstarenje.jpg"
+    "activities": ["18", "19", "40"],
+    "picture": "/activities/krstarenje skadarsko.jpg"
   },
   {
     "id": 7,
@@ -86,7 +86,7 @@
     "category": "6",
     "number_of_participatns": "10-20",
     "duration": "12h",
-    "activities": ["15", "27"],
+    "activities": ["15", "27", "40"],
     "picture": "/activities/kanjoning.jpg"
   }
 ]

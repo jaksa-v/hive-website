@@ -84,7 +84,7 @@ export default function MobileNavigation() {
               Aktivnosti
             </a>
             <a
-              href="/categories"
+              href="/programs"
               className="text-white hover:bg-white/10 py-3 px-4 text-lg font-medium rounded-[20px] transition-colors duration-200 bg-white/5 backdrop-blur-sm"
             >
               Programi
