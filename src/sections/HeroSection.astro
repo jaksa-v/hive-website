@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import hiveLogo from "../assets/hive-logo.png";
+import landingImg from "../assets/landing.png";
 ---
 
 <section
@@ -13,32 +14,46 @@ import hiveLogo from "../assets/hive-logo.png";
   </div>
   <div class="max-w-screen-lg mx-auto relative z-10 w-full">
     <div
-      class="flex flex-col items-center md:items-start gap-y-[30px] md:max-w-[80%] lg:max-w-[60%]"
+      class="flex flex-col md:flex-row mt-10 md:mt-14 items-center md:items-stretch gap-y-10 md:gap-y-0 md:gap-x-12 lg:gap-x-20 justify-between w-full"
     >
-      <Image
-        src={hiveLogo}
-        alt="Hive logo"
-        class="w-[250px] md:w-[300px] lg:w-[400px]"
-      />
-      <div>
+      {/* Left: Logo, Heading, Text, Button */}
+      <div
+        class="flex-1 flex flex-col items-center md:items-start justify-center gap-y-6 max-w-full md:max-w-[60%]"
+      >
+        <Image
+          src={hiveLogo}
+          alt="Hive logo"
+          class="w-[120px] md:w-[160px] lg:w-[200px] mb-2"
+        />
         <h1
-          class="text-white font-semibold text-[26px] md:text-[36px] lg:text-[48px] leading-[1.4]"
+          class="text-white font-semibold text-[26px] md:text-[36px] lg:text-[48px] leading-[1.2]"
         >
           Iskustvo koje gradi tim!
         </h1>
         <p
-          class="text-white text-justify mt-[10px] text-base md:text-lg lg:text-xl opacity-90"
+          class="text-white text-justify mt-[8px] text-base md:text-lg lg:text-xl opacity-90"
         >
           Vaš partner za nezaboravna iskustva! Pomažemo vam da kreirate savršene
           timske aktivnosti koje povezuju vaš tim i jačaju saradnju.
         </p>
+        <a
+          href="/categories"
+          class="bg-[#BF02C9] hover:bg-[#a102ac] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-[20px] w-full md:max-w-[180px] md:w-full md:px-8 py-4 inline-block text-center mt-2"
+        >
+          <span class="text-white font-semibold">Aktivnosti</span>
+        </a>
       </div>
-      <a
-        href="/categories"
-        class="bg-[#BF02C9] hover:bg-[#a102ac] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-[20px] w-full md:max-w-[180px] md:w-full md:px-8 py-4 inline-block text-center"
+      {/* Right: Landing Image */}
+      <div
+        class="flex-1 flex items-center justify-center md:justify-end mt-8 md:mt-0 h-[300px] md:h-[420px] lg:h-[520px]"
       >
-        <span class="text-white font-semibold">Aktivnosti</span>
-      </a>
+        <Image
+          src={landingImg}
+          alt="Landing visual"
+          class="rounded-2xl shadow-lg h-full w-auto max-w-full object-cover"
+          style="aspect-ratio: 4/3;"
+        />
+      </div>
     </div>
   </div>
 </section>
