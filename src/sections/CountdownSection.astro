@@ -1,7 +1,7 @@
 ---
 import Countdown from "../components/Countdown";
 import { Image } from "astro:assets";
-import backgroundImage from "../assets/countdown-image.jpg";
+import countdownImage from "../assets/countdown-image.jpg";
 ---
 
 <section
@@ -10,9 +10,9 @@ import backgroundImage from "../assets/countdown-image.jpg";
 >
   <!-- Background image -->
   <Image
-    src={backgroundImage}
-    alt="Background"
-    class="absolute inset-0 w-full h-full object-cover"
+    src={countdownImage}
+    alt="Countdown Background"
+    class="absolute inset-0 w-full h-full object-cover opacity-80 z-[1]"
   />
   <!-- Gradient overlay -->
   <div

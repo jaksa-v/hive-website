@@ -3,6 +3,7 @@ import "@fontsource-variable/work-sans";
 import MobileNavigation from "../components/MobileNavigation.jsx";
 import DesktopNavigation from "../components/DesktopNavigation.astro";
 import FooterSection from "../sections/FooterSection.astro";
+import backgroundImage from "../assets/background.png";
 
 // Only load Partytown in production
 const loadPartytown = import.meta.env.PROD;
@@ -34,7 +35,11 @@ const loadPartytown = import.meta.env.PROD;
     )}
     <title>HIVE</title>
   </head>
-  <body class="font-sans bg-[#2B2B2B]">
+  <body class="font-sans bg-[#2B2B2B] relative">
+    <div
+      class="fixed inset-0 w-full h-full z-[-1]"
+      style={`background-image: url(${backgroundImage.src}); background-size: cover; background-position: center; background-repeat: no-repeat; background-blend-mode: multiply; opacity: 0.15;`}
+    ></div>
     <MobileNavigation client:load />
     <DesktopNavigation />
     <slot />
