@@ -38,7 +38,7 @@ const categories = await getCollection("categories");
     <div class="hidden md:flex flex-wrap justify-center gap-5">
       {
         categories.map((item) => (
-          <div class="w-[calc(25%-16px)]">
+          <div class="w-[calc(33.333%-16px)]">
             <CategoryCard category={item.data} />
           </div>
         ))
