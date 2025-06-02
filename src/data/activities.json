@@ -482,16 +482,5 @@
     "audience": "Company/Public",
     "number_of_participatns": "5-30",
     "picture": "/activities/zipline.jpg"
-  },
-  {
-    "id": 47,
-    "title": "Zipline 2",
-    "category": "6",
-    "outdoor": true,
-    "description": "Ovaj adrenalinski izazov omogućava učesnicima da se spuste niz žičaru, leteći iznad prelepih pejzaža i prirodnih ljepota. Zipline pruža jedinstven doživljaj slobodnog leta i osvajanja visina, testirajući hrabrost i ljubav prema avanturama. Ova aktivnost je savršena za sve koji žele uzbuđenje i nezaboravno iskustvo.",
-    "duration": "1-2h",
-    "audience": "Company/Public",
-    "number_of_participatns": "5-30",
-    "picture": "/activities/zipline.jpg"
   }
 ]
