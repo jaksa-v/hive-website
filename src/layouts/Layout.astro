@@ -5,6 +5,23 @@ import DesktopNavigation from "../components/DesktopNavigation.astro";
 import FooterSection from "../sections/FooterSection.astro";
 import backgroundImage from "../assets/background.png";
 
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const { 
+  title = "HIVE - Centar avanture, edukacije i timske sinergije",
+  description = "HIVE organizuje društvena okupljanja, edukativne programe, tim bilding aktivnosti i kreativne radionice. Inspirišemo ljude kroz jedinstvene i interaktivne događaje.",
+  image = "/favicon.svg",
+  canonical
+} = Astro.props;
+
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(image, Astro.site);
+
 // Only load Partytown in production
 const loadPartytown = import.meta.env.PROD;
 ---
@@ -16,6 +33,54 @@ const loadPartytown = import.meta.env.PROD;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="HIVE" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "HIVE",
+        "description": "Centar avanture, edukacije i timske sinergije. Organizujemo društvena okupljanja, edukativne programe, tim bilding aktivnosti i kreativne radionice.",
+        "url": "https://hiveagency.me",
+        "image": "https://hiveagency.me/favicon.svg",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "ME"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Montenegro"
+        },
+        "serviceType": [
+          "Tim bilding aktivnosti",
+          "Edukativni programi",
+          "Društvena okupljanja",
+          "Kreativne radionice",
+          "Korporativni eventi"
+        ]
+      }
+    </script>
+    
     {loadPartytown && (
       <>
         <script
@@ -53,7 +118,6 @@ const loadPartytown = import.meta.env.PROD;
         <!-- Hotjar Tracking Code for https://hiveagency.me/ -->
       </>
     )}
-    <title>HIVE</title>
   </head>
   <body class="font-sans bg-[#2B2B2B] relative">
     <div

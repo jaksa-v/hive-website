@@ -13,7 +13,10 @@ const [categories, activities] = await Promise.all([
 ]);
 ---
 
-<Layout>
+<Layout
+  title="Kategorije aktivnosti - HIVE"
+  description="Pregledajte sve kategorije aktivnosti koje HIVE nudi - od avanturističkih podviga i sportskih takmičenja do edukativnih radionica i korporativnih programa."
+>
   <CategoriesComponent
     client:load
     categories={categories.map((category) => category.data)}
