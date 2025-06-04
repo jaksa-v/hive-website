@@ -10,17 +10,20 @@ export interface Props {
   description?: string;
   image?: string;
   canonical?: string;
+  lastModified?: string;
 }
 
 const { 
-  title = "HIVE - Centar avanture, edukacije i timske sinergije",
+  title = "HIVE - Tim bilding, edukativni programi i aktivnosti u Crnoj Gori",
   description = "HIVE organizuje društvena okupljanja, edukativne programe, tim bilding aktivnosti i kreativne radionice. Inspirišemo ljude kroz jedinstvene i interaktivne događaje.",
   image = "/favicon.svg",
-  canonical
+  canonical,
+  lastModified
 } = Astro.props;
 
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
 const imageURL = new URL(image, Astro.site);
+const lastModifiedDate = lastModified || new Date().toISOString();
 
 // Only load Partytown in production
 const loadPartytown = import.meta.env.PROD;
@@ -46,6 +49,7 @@ const loadPartytown = import.meta.env.PROD;
     <meta property="og:image" content={imageURL} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:site_name" content="HIVE" />
+    <meta property="og:updated_time" content={lastModifiedDate} />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -137,5 +141,35 @@ const loadPartytown = import.meta.env.PROD;
     margin: 0;
     width: 100%;
     height: 100%;
+  }
+
+  /* Responsive media queries for SEO compliance */
+  @media (max-width: 768px) {
+    .responsive-text {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .responsive-text {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .responsive-text {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 </style>
