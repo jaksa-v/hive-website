@@ -18,7 +18,7 @@ export const FormInput: React.FC<FormInputProps> = ({
       <img
         loading="lazy"
         src={icon}
-        alt=""
+        alt={`${placeholder} input ikona`}
         className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
       />
       <input

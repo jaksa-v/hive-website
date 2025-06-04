@@ -19,7 +19,7 @@ const imagePath = `/activities/${category.image}`;
     <div class="absolute inset-0 z-0">
       <img
         src={imagePath}
-        alt=""
+        alt={`${category.name} aktivnosti pozadinska slika`}
         class="w-full h-full object-cover opacity-40 filter blur-sm"
       />
     </div>
@@ -29,7 +29,7 @@ const imagePath = `/activities/${category.image}`;
         category.icon ? (
           <img
             src={category.icon}
-            alt=""
+            alt={`${category.name} kategorija ikona`}
             width="60"
             height="60"
             class="filter text-white invert brightness-0 opacity-90"
@@ -37,7 +37,7 @@ const imagePath = `/activities/${category.image}`;
         ) : (
           <Image
             src={placeholderIcon}
-            alt=""
+            alt={`${category.name} kategorija ikona`}
             width={60}
             height={60}
             class="filter brightness-0 opacity-90"
